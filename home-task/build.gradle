@@ -36,7 +36,7 @@ tasks.register("hello") {
 
 task archive ( type: Zip) {
         from 'build'
-        setArchiveName "hello-$BUILD_NUMBER.tar.gz"
+        setArchiveName "hello-1.1.tar.gz"
 }
 
 task runjar(type: JavaExec) {
