@@ -17,7 +17,7 @@ dependencies {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-          artifactId "hello-gradle.jar"
+          artifactId "hello-1.1.jar"
           from components.java
         }
     }
