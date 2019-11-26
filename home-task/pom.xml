@@ -44,6 +44,5 @@
       </plugin>
     </plugins>
     </build>
-    <name>maven-simple-sample</name>
-</project>`
-
+    <name>maven-Project</name>
+</project>
