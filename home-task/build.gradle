@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+jar {
+   baseName = 'ashvedau-custom-artifact'
+    manifest {
+        attributes(
+                'Main-Class': 'com.test.Project'
+        )
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+task "build-custom-ashvedau" {
+    doLast {
+        println 'build-custom-ashvedau'
+    }
+}
+
+task "test-custom-ashvedau"(dependsOn: "build-custom-ashvedau") {
+    doLast {
+        println 'test-custom-ashvedau'
+    }
+}
+
+task "hello"(dependsOn: "test-custom-ashvedau") {
+    doLast {
+        println 'hello'
+    }
+}
