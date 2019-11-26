@@ -39,9 +39,5 @@ task archive ( type: Zip) {
         setArchiveName "hello-1.1.tar.gz"
 }
 
-task runjar(type: JavaExec) {
-  classpath = files('build/libs/hello-gradle.jar')
-  classpath += sourceSets.main.runtimeClasspath
-  main = full.package.classname
-}
+
 
