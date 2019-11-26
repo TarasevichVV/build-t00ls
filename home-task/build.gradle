@@ -44,25 +44,20 @@ jar {
   }
 }
 
-task "build-custom-vmarkau
-" {
+task "build-custom-vmarkau" {
     doLast {
-        println 'build-custom-vmarkau
-        '
+        println 'build-custom-vmarkau'
     }
 }
 
-task "test-custom-vmarkau
-"(dependsOn: "build-custom-vmarkau
-") {
+task "test-custom-vmarkau"(dependsOn: "build-custom-vmarkau") {
     doLast {
         println 'test-custom-vmarkau
         '
     }
 }
 
-task "hello"(dependsOn: "test-custom-vmarkau
-") {
+task "hello"(dependsOn: "test-custom-vmarkau") {
     doLast {
         println 'hello'
     }
