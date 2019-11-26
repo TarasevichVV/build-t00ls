@@ -31,6 +31,7 @@ tasks.register("build-custom") {
 }
 
 tasks.register("test-custom") {
+    dependsOn build-custom
     doLast {
         println 'Hello, World!'
     }
@@ -40,6 +41,13 @@ tasks.register("hello") {
     doLast {
         println 'Hello, World!'
     }
+}
+
+task runJar() << {
+  javaexec {
+    main="-jar";
+    args = [ "hello-gradle.jar" ]
+  } 
 }
 
 task archive ( type: Zip) {
