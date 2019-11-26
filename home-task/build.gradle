@@ -21,6 +21,11 @@ dependencies {
     testImplementation 'junit:junit:4.11'
 }
 
+plugins {
+    id 'base'
+    }
+
+
 group = 'com.test'
 version = 'SNAPSHOT'
 description = 'maven-home-task'
