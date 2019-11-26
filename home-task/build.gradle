@@ -1,0 +1,51 @@
+apply plugin: 'java'
+
+dependencies {
+	compile "org.apache.commons:commons-collections4:4.1"
+	compile "log4j:log4j:1.2.17"
+	testCompile "junit:junit:4.12"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+          artifactId "hello-gradle.jar"
+          from components.java
+        }
+    }
+}
+
+tasks.register("build-custom") {
+    doLast {
+        println 'Hello, World!'
+    }
+}
+
+tasks.register("test-custom") {
+    doLast {
+        println 'Hello, World!'
+    }
+}
+
+tasks.register("hello") {
+    doLast {
+        println 'Hello, World!'
+    }
+}
+
+task archive ( type: Zip) {
+        from 'build'
+        setArchiveName "hello-$BUILD_NUMBER.tar.gz"
+}
+
+task runjar(type: JavaExec) {
+  classpath = files('build/libs/hello-gradle.jar')
+  classpath += sourceSets.main.runtimeClasspath
+  main = full.package.classname
+}
+
+task archive ( type: Zip) {
+        from 'build'
+        setArchiveName "hello-$BUILD_NUMBER.tar.gz"
+}
+
