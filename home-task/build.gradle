@@ -1,6 +1,14 @@
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
+repositories {
+    mavenLocal()
+    maven {
+        url = 'http://repo.maven.apache.org/maven2'
+    }
+}
+
+
 dependencies {
 	compile "org.apache.commons:commons-collections4:4.1"
 	compile "log4j:log4j:1.2.17"
