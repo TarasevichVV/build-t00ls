@@ -4,7 +4,7 @@
     <groupId>com.test</groupId>
     <artifactId>home-task</artifactId>
     <packaging>jar</packaging>
-    <version>SNAPSHOT</version>
+    <version>1.1</version>
     <properties>
       <maven.compiler.release>12</maven.compiler.release>
     </properties>
