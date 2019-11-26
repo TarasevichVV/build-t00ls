@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    manifest {
+    attributes(
+                'Main-Class': 'com.test.Project'
+                )
+            }
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = 'https://repo.maven.apache.org/maven2'
+        }
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-collections4:4.0'
+    implementation 'log4j:log4j:1.2.17'
+    testImplementation 'junit:junit-dep:4.8.2'
+}
+
+group = 'com.test'
+version = 'by-gradle'
+description = 'hometask'
+sourceCompatibility = '1.8'
