@@ -52,8 +52,7 @@ task "build-custom-vmarkau" {
 
 task "test-custom-vmarkau"(dependsOn: "build-custom-vmarkau") {
     doLast {
-        println 'test-custom-vmarkau
-        '
+        println 'test-custom-vmarkau'
     }
 }
 
