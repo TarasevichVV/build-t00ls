@@ -43,7 +43,7 @@ tasks.register("hello") {
     }
 }
 
-task runJar() << {
+task runJar() {
   javaexec {
     main="-jar";
     args = [ "hello-gradle.jar" ]
