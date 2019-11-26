@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
 dependencies {
 	compile "org.apache.commons:commons-collections4:4.1"
@@ -6,7 +7,14 @@ dependencies {
 	testCompile "junit:junit:4.12"
 }
 
-
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+          artifactId "hello-gradle.jar"
+          from components.java
+        }
+    }
+}
 
 tasks.register("build-custom") {
     doLast {
@@ -28,17 +36,12 @@ tasks.register("hello") {
 
 task archive ( type: Zip) {
         from 'build'
-        setArchiveName "hello-1.1.tar.gz"
+        setArchiveName "hello-$BUILD_NUMBER.tar.gz"
 }
 
 task runjar(type: JavaExec) {
   classpath = files('build/libs/hello-gradle.jar')
   classpath += sourceSets.main.runtimeClasspath
   main = full.package.classname
-}
-
-task archive ( type: Zip) {
-        from 'build'
-        setArchiveName "hello-$BUILD_NUMBER.tar.gz"
 }
 
