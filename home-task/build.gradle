@@ -1,19 +1,20 @@
+
 plugins {
     id 'java'
+    id 'maven-publish'
+    id 'java-library-distribution'
 }
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'com.test.Project'
-        )
+task hello {
+    doLast {
+        println 'Hello world!'
     }
 }
 
 repositories {
     mavenLocal()
     maven {
-        url = 'https://repo.maven.apache.org/maven2'
+        url = 'http://repo.maven.apache.org/maven2'
     }
 }
 
@@ -23,9 +24,19 @@ dependencies {
     testImplementation 'junit:junit:4.11'
 }
 
+test{
+    useJUnit()
+
+    maxHeapSize = '50M'
+}
+distributions {
+    main {
+        distributionBaseName = 'my-name'
+    }
+}
+archivesBaseName = 'home-task-ayanchuk'
 group = 'com.test'
 version = '1.0-SNAPSHOT'
-description = 'maven-home-task'
+description = 'gradle-home-task'
 sourceCompatibility = '1.8'
-
 
