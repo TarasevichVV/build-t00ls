@@ -41,3 +41,18 @@ publishing {
         }
     }
 }
+task "build-custom" {
+    doLast {
+        println 'Doing build-custom...'
+    }
+}
+task "test-custom"(dependsOn: "build-custom") {
+    doLast {
+        println 'Doing test-custom...'
+    }
+}
+task "hello"(dependsOn: "test-custom") {
+    doLast {
+        println 'Doing hello...'
+    }
+}
