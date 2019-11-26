@@ -40,3 +40,9 @@
 ![Image](/images/maven-output1.png)
 
 
+###     Maven workspace
+![Image](/images/maven-ws.png)
+
+
+###     Gradle workspace
+![Image](/images/gradle-ws.png)
