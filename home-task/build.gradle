@@ -6,14 +6,7 @@ dependencies {
 	testCompile "junit:junit:4.12"
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-          artifactId "hello-gradle.jar"
-          from components.java
-        }
-    }
-}
+
 
 tasks.register("build-custom") {
     doLast {
