@@ -49,4 +49,3 @@ task "hello"(dependsOn: "test-custom") {
         println 'Hello world!'
     }
 }
-
