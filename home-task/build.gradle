@@ -45,3 +45,4 @@ jar {
         attributes 'Main-Class': 'com.test.Project'
     }
 }
+
