@@ -20,6 +20,16 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+void test1(){
+    for (;;){
+        System.out.println("hello");
+    }
+}
+void test2(){
+    while(true){
+        System.out.println("world");
+    }
+}
 /**
  * A simple example of how to setup a JAX-WS Web Service. It can say hello to everyone or to someone in particular.
  *
@@ -27,12 +37,7 @@ import javax.jws.WebService;
  */
 
 @WebService(targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
-public void infiniteLoopUsingWhile() {
-    while (true) {
-         do print("pepa")
-           }
-        }
-infiniteLoopUsingWhile()
+
 public interface HelloWorldService {
 
     /**
