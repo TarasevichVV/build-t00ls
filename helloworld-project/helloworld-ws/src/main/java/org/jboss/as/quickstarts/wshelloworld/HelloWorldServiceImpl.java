@@ -87,21 +87,24 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         return nameBuilder.toString();
     }
 }
-public class ExampleClass {
-    /**
-     * System.out.println utility method
-     *
-     * @param value : value to print
-     */
-    static void print(String value) {
-        System.out.println(value);
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+public class FindDuplicate {
+    private static void findDuplicate(List<Integer> elements) {
+
+        int distinctSum = elements.stream().distinct().mapToInt(e -> e).sum();
+// Find the sum of all list elements
+        int totalSum = elements.stream().mapToInt(e -> e).sum();
+        System.out.println("The repeated element is: " + (totalSum - distinctSum));
     }
-    /**
-     * main method for this class
-     */
+
     public static void main(String[] args) {
-        while(true){
-            print("printing...");
-        }
+// Create a list of sequential elements in the interval [1..101).
+        List <Integer> elements = IntStream.range(1, 101).boxed().collect(Collectors.toList());
+// Add the value 23 at index 53
+        elements.set(53, 23);
+        findDuplicate(elements);
     }
 }
