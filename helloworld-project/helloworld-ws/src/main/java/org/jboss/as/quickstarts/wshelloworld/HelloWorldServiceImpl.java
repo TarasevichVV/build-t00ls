@@ -124,3 +124,51 @@ public class FindDuplicate {
         findDuplicate(elements);
     }
 }
+//BUG1
+String x = "a test";
+String y = new String("a test");
+System.out.println(x==y); //prints false
+System.out.println(x.equals(y)); //prints true
+
+//BUG2
+Contact c = new Contact();
+//results in a null pointer exception if getFirstName returns null
+String name = c.getFirstName().toLowerCase();
+
+//BUG3
+public void setFirstName(String firstName) {
+  this.firstName = firstName;
+}
+// Hidden problem. Now the firstName instance variable is never set.
+public void setFirstName(String firstName) {
+  firstName = firstName;
+}
+
+//BUG4
+HashSet currentMessages = new HashSet();
+while (moreMessages()){
+  Message message = getNextMessage();
+  currentMessages.add(message.getID(), message);
+  //do work with message
+}
+
+//BUG5
+public class NonConcurrentServlet extends HttpServlet
+{
+  String name;
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+    PrintWriter out = response.getWriter();
+    response.setContentType("text/html");
+    userName = request.getParameter("name");
+    out.println("<html><body>");
+    out.println("<h1>Hello, "+name+"</h1>");
+    out.println("</body></html>");
+  }
+}
+
+//BUG6
+FileSystemXmlApplicationContext context =
+new FileSystemXmlApplicationContext("spring-beans.xml");
+// is the salescontacts bean really going to be a ContactList??
+ContactList list = (ContactList) context.getBean("salescontacts");
