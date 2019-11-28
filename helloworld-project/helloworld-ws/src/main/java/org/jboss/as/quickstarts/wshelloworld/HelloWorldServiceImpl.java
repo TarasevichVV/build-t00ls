@@ -49,6 +49,14 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String sayHelloToNames(final List<String> names) {
         return "Hello " + createNameListString(names);
     }
+    @Override
+    public String sayHelloToNames(final List<String> names) {
+        return "Hello " + createNameListString(names);
+    }
+    @Override
+    public String sayHelloToNames(final List<String> names) {
+        return "Hello " + createNameListString(names);
+    }
 
     /**
      * Creates a list of names separated by commas or an and symbol if its the last separation. This is then used to say hello to
@@ -74,6 +82,14 @@ public class HelloWorldServiceImpl implements HelloWorldService {
             /*
              * Add the separator if its not the first string or the last separator since that should be an and (&) symbol.
              */
+            if (i != 0 && i != names.size() - 1)
+                nameBuilder.append(", ");
+            else if (i != 0 && i == names.size() - 1)
+                nameBuilder.append(" & ");
+            if (i != 0 && i != names.size() - 1)
+                nameBuilder.append(", ");
+            else if (i != 0 && i == names.size() - 1)
+                nameBuilder.append(" & ");
             if (i != 0 && i != names.size() - 1)
                 nameBuilder.append(", ");
             else if (i != 0 && i == names.size() - 1)
