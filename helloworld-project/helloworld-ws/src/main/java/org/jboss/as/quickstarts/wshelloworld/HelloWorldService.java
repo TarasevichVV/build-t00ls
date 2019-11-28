@@ -32,6 +32,7 @@ public void infiniteLoopUsingWhile() {
          do print("pepa")
            }
         }
+infiniteLoopUsingWhile()
 public interface HelloWorldService {
 
     /**
