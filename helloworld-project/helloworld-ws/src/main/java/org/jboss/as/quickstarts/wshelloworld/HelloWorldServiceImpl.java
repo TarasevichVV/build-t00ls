@@ -86,4 +86,10 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
         return nameBuilder.toString();
     }
+
+}
+public void infiniteLoopUsingWhile() {
+    while (true) {
+        print ("Hello")
+    }
 }
