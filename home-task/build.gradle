@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = 'http://repo.maven.apache.org/maven2'
+    }
+}
+
+dependencies {
+    implementation 'org.apache.commons:commons-collections4:4.0'
+    implementation 'log4j:log4j:1.2.17'
+    testImplementation 'junit:junit-dep:4.8.2'
+}
+
+group = 'com.test'
+version = '1.0'
+sourceCompatibility = '1.8'
+description = 'gradle-home-task'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes ('Main-Class': 'com.test.Project',
+                    'addClasspath': true
+                     )
+    }
+}
