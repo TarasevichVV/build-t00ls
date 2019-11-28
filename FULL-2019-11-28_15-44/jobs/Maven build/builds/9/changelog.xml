@@ -1,0 +1,21 @@
+commit 370fcc3a02ca8d6a8e7e32b7fa17169d2479c899
+tree 49af69119ee1129897fdd23c6a27dfd749cc4f60
+parent 42ccd906a47965320423df8624948a46904efa13
+author Aliaksandr Miasnikovich <aliaksandr_miasnikovich@epam.com> 2019-11-26 20:57:45 +0300
+committer Aliaksandr Miasnikovich <aliaksandr_miasnikovich@epam.com> 2019-11-26 20:57:45 +0300
+
+    manual start mvn
+
+
+:000000 100644 0000000000000000000000000000000000000000 029bc8d4113c1079e832b8c4097519cb4fecee4d A	hello-7.tar
+:000000 100644 0000000000000000000000000000000000000000 dc08f569bdba0346c0bf49c04d4f99ecf414867f A	home-task/target/classes/com/test/Project.class
+:000000 100644 0000000000000000000000000000000000000000 cb779e7c8a6d3e0e587af9134a5d65f351ad9a86 A	home-task/target/classes/project.properties
+:000000 100644 0000000000000000000000000000000000000000 dd2eae6a5ebd3c624ef7d59cd2ed1cb7d87588a1 A	home-task/target/jenkins-training-1.0.jar
+:000000 100644 0000000000000000000000000000000000000000 8bdedaa634550c4f3e737f3f2953fe2327f09fa6 A	home-task/target/maven-archiver/pom.properties
+:000000 100644 0000000000000000000000000000000000000000 347ecbf9e9646780c5ff8452b524c5218035be59 A	home-task/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+:000000 100644 0000000000000000000000000000000000000000 3e7e07804dd0fd88ffc224c7ff173ff1ad33d589 A	home-task/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+:000000 100644 0000000000000000000000000000000000000000 ff756b3788a5cbd4c1772cf4e7e14912cbc6dbf5 A	home-task/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+:000000 100644 0000000000000000000000000000000000000000 dde08f1e50edaebc6a53f23747d02e471c02de26 A	home-task/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+:000000 100644 0000000000000000000000000000000000000000 5bae613a7268d52f59ab6a010616d4ccc3612811 A	home-task/target/surefire-reports/TEST-com.test.UnitTest.xml
+:000000 100644 0000000000000000000000000000000000000000 c73ec2480f6d93469843af176cc66341dac18ad8 A	home-task/target/surefire-reports/com.test.UnitTest.txt
+:000000 100644 0000000000000000000000000000000000000000 23fed76aae18a695bbf50f76ae9e0b244769a99d A	home-task/target/test-classes/com/test/UnitTest.class

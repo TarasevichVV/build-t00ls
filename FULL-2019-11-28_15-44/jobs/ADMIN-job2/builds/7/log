@@ -1,0 +1,16 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ADMIN-job2
+[ADMIN-job2] $ /bin/sh -xe /tmp/jenkins877291482331559906.sh
++ ping -c 5 tut.by
+PING tut.by (178.172.160.4) 56(84) bytes of data.
+64 bytes from 178-172-160-4.hosterby.com (178.172.160.4): icmp_seq=1 ttl=61 time=2.72 ms
+64 bytes from 178-172-160-4.hosterby.com (178.172.160.4): icmp_seq=2 ttl=61 time=2.04 ms
+64 bytes from 178-172-160-4.hosterby.com (178.172.160.4): icmp_seq=3 ttl=61 time=2.17 ms
+64 bytes from 178-172-160-4.hosterby.com (178.172.160.4): icmp_seq=4 ttl=61 time=2.08 ms
+64 bytes from 178-172-160-4.hosterby.com (178.172.160.4): icmp_seq=5 ttl=61 time=1.99 ms
+
+--- tut.by ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4015ms
+rtt min/avg/max/mdev = 1.996/2.205/2.727/0.270 ms
+Finished: SUCCESS

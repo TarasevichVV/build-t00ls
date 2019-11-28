@@ -1,0 +1,14 @@
+Started by upstream project "[8mha:////4Gs0q2nTQgWJC+NrWZ/hQBNEUHBtXd3ovgpg881Wxbw1AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/az8JP2QxOJsQ30ALQMVIsAAAAA=[0mTask1" build number [8mha:////4ALgklPIKosFgBx6UsBOVDAWnc8E7068kfvmTxBSARNYAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZe/az8JP2QxOJsQ30jMwCqzWACwgAAAA==[0m26
+originally caused by:
+ Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building remotely on [8mha:////4E51bFgW+lLyRccmAPTk4oBjRgkYirA4DDVRSYVUuLITAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZB/eT83ILSktQi/eKcxLJUA0MA4TO/wsYAAAA=[0mslave01 in workspace /home/jenkins/workspace/Task1-1
+No emails were triggered.
+[Task1-1] $ /bin/sh -xe /tmp/jenkins2959626156429368994.sh
++ tar -xvf /home/jenkins/artifacts/hello-26.tar
++ xargs java -jar
+Hello, MNT Lab!
+Email was triggered for: Always
+Sending email for trigger: Always
+Sending email to: project-for-order@yandex.ru aliaksandr_miasnikovich@epam.com
+Finished: SUCCESS

@@ -1,0 +1,9 @@
+Started by upstream project "[8mha:////4OWaZowWAKZjom1P7LzEsyJ79sgkEwurFSH/fIJXJEMTAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/az8JP2QxOJsQ11DfQBLDgy6wgAAAA==[0mTask1-1" build number [8mha:////4GLoG67/r1+VlqjC0kVVeAGE/7tBVMALiAr+Lr90JEnOAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBj79rPwk/ZDE4mxDXUN9CwD5FbUEwwAAAA==[0m8
+originally caused by:
+ Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/Task1-2
+[Task1-2] $ /bin/sh -xe /tmp/jenkins7096799351905105290.sh
++ echo I will run after Task1-1. Thank you for attention :-)
+I will run after Task1-1. Thank you for attention :-)
+Finished: SUCCESS

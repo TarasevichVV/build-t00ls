@@ -1,0 +1,9 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/USER-job2
+[USER-job2] $ /bin/sh -xe /tmp/jenkins7767654860062120541.sh
++ java -version
+openjdk version "1.8.0_232"
+OpenJDK Runtime Environment (build 1.8.0_232-b09)
+OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)
+Finished: SUCCESS

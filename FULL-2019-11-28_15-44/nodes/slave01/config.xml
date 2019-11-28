@@ -1,0 +1,37 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>slave01</name>
+  <description></description>
+  <remoteFS>/home/jenkins</remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>EXCLUSIVE</mode>
+  <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+  <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@1.31.0">
+    <host>192.168.56.241</host>
+    <port>22</port>
+    <credentialsId>f54812b5-1c99-4405-adf3-16a78b53c7e3</credentialsId>
+    <launchTimeoutSeconds>210</launchTimeoutSeconds>
+    <maxNumRetries>10</maxNumRetries>
+    <retryWaitTime>15</retryWaitTime>
+    <sshHostKeyVerificationStrategy class="hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy"/>
+    <tcpNoDelay>true</tcpNoDelay>
+  </launcher>
+  <label>slave01</label>
+  <nodeProperties>
+    <hudson.slaves.EnvironmentVariablesNodeProperty>
+      <envVars serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>2</int>
+          <string>JAVA_HOME</string>
+          <string>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.232.b09-0.el7_7.x86_64/jre</string>
+          <string>JENKINS_HOME</string>
+          <string>/home/jenkins</string>
+        </tree-map>
+      </envVars>
+    </hudson.slaves.EnvironmentVariablesNodeProperty>
+  </nodeProperties>
+</slave>

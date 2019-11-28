@@ -1,0 +1,7 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/ADMIN-job1
+[ADMIN-job1] $ /bin/sh -xe /tmp/jenkins3474437789013795375.sh
++ echo Test
+Test
+Finished: SUCCESS

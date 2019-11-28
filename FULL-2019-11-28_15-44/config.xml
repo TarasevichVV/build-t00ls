@@ -1,0 +1,217 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors/>
+  <version>2.190.3</version>
+  <installStateName>RUNNING</installStateName>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="com.michelin.cio.hudson.plugins.rolestrategy.RoleBasedAuthorizationStrategy">
+    <roleMap type="globalRoles">
+      <role name="admin" pattern=".*">
+        <permissions>
+          <permission>hudson.model.View.Delete</permission>
+          <permission>hudson.model.Computer.Connect</permission>
+          <permission>hudson.model.Run.Delete</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains</permission>
+          <permission>hudson.model.Computer.Create</permission>
+          <permission>hudson.model.View.Configure</permission>
+          <permission>hudson.model.Computer.Build</permission>
+          <permission>hudson.model.Item.Configure</permission>
+          <permission>hudson.model.Hudson.Administer</permission>
+          <permission>hudson.model.Item.Cancel</permission>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View</permission>
+          <permission>hudson.model.Computer.Delete</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock</permission>
+          <permission>hudson.scm.SCM.Tag</permission>
+          <permission>hudson.model.Item.Move</permission>
+          <permission>hudson.model.Item.Discover</permission>
+          <permission>hudson.model.Hudson.Read</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update</permission>
+          <permission>hudson.model.Item.Create</permission>
+          <permission>hudson.model.Item.Workspace</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete</permission>
+          <permission>hudson.model.Computer.Provision</permission>
+          <permission>hudson.model.Run.Replay</permission>
+          <permission>hudson.model.View.Read</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.View</permission>
+          <permission>hudson.model.View.Create</permission>
+          <permission>hudson.model.Item.Delete</permission>
+          <permission>hudson.model.Computer.Configure</permission>
+          <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create</permission>
+          <permission>hudson.model.Computer.Disconnect</permission>
+          <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve</permission>
+          <permission>hudson.model.Run.Update</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>admin</sid>
+        </assignedSIDs>
+      </role>
+      <role name="anonymous" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
+      </role>
+      <role name="user" pattern=".*">
+        <permissions>
+          <permission>hudson.model.Hudson.Read</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>user</sid>
+        </assignedSIDs>
+      </role>
+    </roleMap>
+    <roleMap type="slaveRoles"/>
+    <roleMap type="projectRoles">
+      <role name="anonymous" pattern="USER.*">
+        <permissions>
+          <permission>hudson.model.Item.Read</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>anonymous</sid>
+        </assignedSIDs>
+      </role>
+      <role name="user" pattern="USER.*">
+        <permissions>
+          <permission>hudson.model.Item.Read</permission>
+          <permission>hudson.model.Item.Build</permission>
+          <permission>hudson.model.Item.Configure</permission>
+        </permissions>
+        <assignedSIDs>
+          <sid>user</sid>
+        </assignedSIDs>
+      </role>
+    </roleMap>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>true</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.EscapedMarkupFormatter"/>
+  <jdks>
+    <jdk>
+      <name>Java 8</name>
+      <home>/usr/local/openjdk-8</home>
+      <properties/>
+    </jdk>
+  </jdks>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds>
+    <org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud plugin="kubernetes@1.21.3">
+      <name>kubernetes</name>
+      <defaultsProviderTemplate></defaultsProviderTemplate>
+      <templates>
+        <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
+          <inheritFrom></inheritFrom>
+          <name>jenkins-slave</name>
+          <namespace>jenkins</namespace>
+          <privileged>false</privileged>
+          <capOnlyOnAlivePods>false</capOnlyOnAlivePods>
+          <alwaysPullImage>false</alwaysPullImage>
+          <instanceCap>2147483647</instanceCap>
+          <slaveConnectTimeout>100</slaveConnectTimeout>
+          <idleMinutes>0</idleMinutes>
+          <activeDeadlineSeconds>0</activeDeadlineSeconds>
+          <label>cloud</label>
+          <nodeSelector></nodeSelector>
+          <nodeUsageMode>EXCLUSIVE</nodeUsageMode>
+          <hostNetwork>false</hostNetwork>
+          <workspaceVolume class="org.csanchez.jenkins.plugins.kubernetes.volumes.workspace.EmptyDirWorkspaceVolume">
+            <memory>false</memory>
+          </workspaceVolume>
+          <volumes>
+            <org.csanchez.jenkins.plugins.kubernetes.volumes.PersistentVolumeClaim>
+              <mountPath>/var/jenkins_home</mountPath>
+              <claimName>localvolume-pvc</claimName>
+              <readOnly>false</readOnly>
+            </org.csanchez.jenkins.plugins.kubernetes.volumes.PersistentVolumeClaim>
+          </volumes>
+          <containers>
+            <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
+              <name>mias</name>
+              <image>jenkins/jnlp-slave</image>
+              <privileged>false</privileged>
+              <alwaysPullImage>false</alwaysPullImage>
+              <workingDir>/home/jenkins/</workingDir>
+              <command>/bin/sh -c</command>
+              <args></args>
+              <ttyEnabled>true</ttyEnabled>
+              <resourceRequestCpu></resourceRequestCpu>
+              <resourceRequestMemory></resourceRequestMemory>
+              <resourceLimitCpu></resourceLimitCpu>
+              <resourceLimitMemory></resourceLimitMemory>
+              <envVars/>
+              <ports/>
+              <livenessProbe>
+                <execArgs></execArgs>
+                <timeoutSeconds>0</timeoutSeconds>
+                <initialDelaySeconds>0</initialDelaySeconds>
+                <failureThreshold>0</failureThreshold>
+                <periodSeconds>0</periodSeconds>
+                <successThreshold>0</successThreshold>
+              </livenessProbe>
+            </org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
+          </containers>
+          <envVars/>
+          <annotations/>
+          <imagePullSecrets/>
+          <nodeProperties/>
+          <yamlMergeStrategy class="org.csanchez.jenkins.plugins.kubernetes.pod.yaml.Overrides"/>
+          <showRawYaml>true</showRawYaml>
+          <podRetention class="org.csanchez.jenkins.plugins.kubernetes.pod.retention.Default"/>
+        </org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
+      </templates>
+      <serverUrl>https://192.168.56.240:6443</serverUrl>
+      <skipTlsVerify>true</skipTlsVerify>
+      <addMasterProxyEnvVars>false</addMasterProxyEnvVars>
+      <capOnlyOnAlivePods>false</capOnlyOnAlivePods>
+      <namespace>jenkins</namespace>
+      <directConnection>false</directConnection>
+      <jenkinsUrl>http://jenkins</jenkinsUrl>
+      <credentialsId>KubernetesCluster</credentialsId>
+      <containerCap>10</containerCap>
+      <retentionTimeout>5</retentionTimeout>
+      <connectTimeout>5</connectTimeout>
+      <readTimeout>15</readTimeout>
+      <podLabels>
+        <org.csanchez.jenkins.plugins.kubernetes.PodLabel>
+          <key>app</key>
+          <value>jcloud</value>
+        </org.csanchez.jenkins.plugins.kubernetes.PodLabel>
+      </podLabels>
+      <usageRestricted>false</usageRestricted>
+      <maxRequestsPerHost>32</maxRequestsPerHost>
+      <waitForPodSec>600</waitForPodSec>
+      <podRetention class="org.csanchez.jenkins.plugins.kubernetes.pod.retention.Never"/>
+    </org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud>
+  </clouds>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>all</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+  </views>
+  <primaryView>all</primaryView>
+  <slaveAgentPort>50000</slaveAgentPort>
+  <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
+  <nodeProperties/>
+  <globalNodeProperties/>
+</hudson>

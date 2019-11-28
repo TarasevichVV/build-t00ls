@@ -1,0 +1,7 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/USER-job1
+[USER-job1] $ /bin/sh -xe /tmp/jenkins3393752717266120920.sh
++ echo /usr/local/openjdk-8
+/usr/local/openjdk-8
+Finished: SUCCESS

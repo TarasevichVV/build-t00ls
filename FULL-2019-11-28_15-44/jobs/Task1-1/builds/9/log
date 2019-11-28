@@ -1,0 +1,11 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/Task1-1
+No emails were triggered.
+[Task1-1] $ /bin/sh -xe /tmp/jenkins6666795537853611183.sh
++ tar -xvf /var/jenkins_home/artifacts/hello-3.tar
++ xargs java -jar
+Hello, MNT Lab!
+No emails were triggered.
+Triggering a new build of [8mha:////4BJQmBrI6lqitn4NizpIRr5Pwdx4bC6AvZZHg5aaclrpAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZe/az8JP2QxOJsQ10jfQCIXSGRwgAAAA==[0mTask1-2
+Finished: SUCCESS

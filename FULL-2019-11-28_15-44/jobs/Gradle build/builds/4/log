@@ -1,0 +1,21 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Graddle build
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MNT-Lab/build-t00ls.git # timeout=10
+Fetching upstream changes from https://github.com/MNT-Lab/build-t00ls.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/MNT-Lab/build-t00ls.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/amiasnikovich^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/amiasnikovich^{commit} # timeout=10
+Checking out Revision 94778d9940fc86e3268923cd02b30422ce6a1a92 (refs/remotes/origin/amiasnikovich)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 94778d9940fc86e3268923cd02b30422ce6a1a92 # timeout=10
+Commit message: "made graddle file"
+ > git rev-list --no-walk 94778d9940fc86e3268923cd02b30422ce6a1a92 # timeout=10
+[Gradle] - Launching build.
+FATAL: The Gradle wrapper has not been found in these directories: /var/jenkins_home/workspace/Graddle build
+Build step 'Invoke Gradle script' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,10 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/Task1-2
+[Task1-2] $ /bin/sh -xe /tmp/jenkins7051247082151065058.sh
++ xargs java -jar
++ tar -xvf /var/jenkins_home/artifacts/hello-8.tar
+Hello, MNT Lab!
++ echo Thank you for attention :-)
+Thank you for attention :-)
+Finished: SUCCESS

@@ -1,0 +1,8 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building on master in workspace /var/jenkins_home/workspace/Task1-2
+[Task1-2] $ /bin/sh -xe /tmp/jenkins7041261531816321247.sh
++ java -jar hello-5.tar
+Error: Unable to access jarfile hello-5.tar
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

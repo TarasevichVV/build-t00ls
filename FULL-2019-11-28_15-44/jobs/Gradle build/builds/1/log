@@ -1,0 +1,37 @@
+Started by user [8mha:////4FnIjkLJhJ0n3Dxo34a+Qel+Z49Ns9GOmxX4s8MJYxllAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgZu/dLi1CL9xJTczDwAEmIUecAAAAA=[0mAliaksandr
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Graddle build
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/MNT-Lab/build-t00ls.git
+ > git init /var/jenkins_home/workspace/Graddle build # timeout=10
+Fetching upstream changes from https://github.com/MNT-Lab/build-t00ls.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/MNT-Lab/build-t00ls.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/MNT-Lab/build-t00ls.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/MNT-Lab/build-t00ls.git # timeout=10
+Fetching upstream changes from https://github.com/MNT-Lab/build-t00ls.git
+ > git fetch --tags --progress -- https://github.com/MNT-Lab/build-t00ls.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/amiasnikovich
+Seen branch in repository origin/anikitsenka
+Seen branch in repository origin/apavlovsky
+Seen branch in repository origin/ashkraba
+Seen branch in repository origin/ashvedau
+Seen branch in repository origin/ayanchuk
+Seen branch in repository origin/dprusevich
+Seen branch in repository origin/ekomarov
+Seen branch in repository origin/ibletsko
+Seen branch in repository origin/master
+Seen branch in repository origin/melizarov
+Seen branch in repository origin/phardzeyeu
+Seen branch in repository origin/shanchar
+Seen branch in repository origin/skudrenko
+Seen branch in repository origin/vmarkau
+Seen branch in repository origin/vtarasevich
+Seen branch in repository origin/ykachatkou
+Seen branch in repository origin/ymatveichyk
+Seen 18 remote branches
+ > git show-ref --tags -d # timeout=10
+ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job.
+Finished: FAILURE

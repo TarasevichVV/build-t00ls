@@ -1,0 +1,49 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>ARTEFACT_NAME</name>
+          <value>/home/jenkins/artifacts/hello-26.tar</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>ARTEFACT_NAME</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Task1</upstreamProject>
+            <upstreamUrl>job/Task1/</upstreamUrl>
+            <upstreamBuild>26</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>admin</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.tasks.MailMessageIdAction plugin="mailer@1.29">
+      <messageId>&lt;519731450.19.1574938193468.JavaMail.jenkins@jenkins-deployment-5d4474454d-6dhjv&gt;</messageId>
+    </hudson.tasks.MailMessageIdAction>
+  </actions>
+  <queueId>373</queueId>
+  <timestamp>1574938192597</timestamp>
+  <startTime>1574938192600</startTime>
+  <result>SUCCESS</result>
+  <duration>237</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>slave01</builtOn>
+  <workspace>/home/jenkins/workspace/Task1-1</workspace>
+  <hudsonVersion>2.190.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>
