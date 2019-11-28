@@ -69,6 +69,9 @@ public class HelloWorldServiceImpl implements HelloWorldService {
             return "Anonymous!";
         }
         
+        while(true){
+        }
+        
         final StringBuilder nameBuilder = new StringBuilder();
         for (int i = 0; i < names.size(); i++) {
 
