@@ -68,8 +68,15 @@ public class HelloWorldServiceImpl implements HelloWorldService {
             return "Anonymous!";
         }
         
-        while (true){
-        }
+        /*
+         * If the list is null or empty then assume the call was anonymous.
+         */
+        /*
+         * If the list is null or empty then assume the call was anonymous.
+         */
+        /*
+         * If the list is null or empty then assume the call was anonymous.
+         */
         
         final StringBuilder nameBuilder = new StringBuilder();
         for (int i = 0; i < names.size(); i++) {
