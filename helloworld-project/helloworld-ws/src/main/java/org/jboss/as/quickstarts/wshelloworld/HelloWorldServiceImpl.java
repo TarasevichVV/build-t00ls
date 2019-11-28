@@ -64,21 +64,14 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         /*
          * If the list is null or empty then assume the call was anonymous.
          */
-        if (names == null || names.isEmpty()) {
+                if (names == null || names.isEmpty()) {
+                    
+                    
+                    
             return "Anonymous!";
         }
         
-        /*
-         * If the list is null or empty then assume the call was anonymous.
-         */
-        /*
-         * If the list is null or empty then assume the call was anonymous.
-         */
-        /*
-         * If the list is null or empty then assume the call was anonymous.
-         */
-        
-        final StringBuilder nameBuilder = new StringBuilder();
+          final StringBuilder nameBuilder = new StringBuilder();
         for (int i = 0; i < names.size(); i++) {
 
             /*
@@ -92,7 +85,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
             nameBuilder.append(names.get(i));
         }
 
-        nameBuilder.append("!");
+           nameBuilder.append("!");
 
         return nameBuilder.toString();
     }
