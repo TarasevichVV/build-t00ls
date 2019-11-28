@@ -1,0 +1,36 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.68">
+  <approvedScriptHashes>
+    <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>0df8729be5c8918c6edf1dc9ea638ae4330e4a71</string>
+    <string>145d91409032b199b6ffa98b3b48d1870d3fec97</string>
+    <string>24cd737e2c670da736956d18c8df6dd70fafb0a5</string>
+    <string>31f9b42aef6709bdf7a7cbaeffdc615eb6c6aaa7</string>
+    <string>352a3e3a33188101aaf92d7e1350870aae6c6cf0</string>
+    <string>3ef8bdd5dd3a16fcbd19462e5ce53c6126d4cfb8</string>
+    <string>427f64ed9ba6012346edaabdd20fa7ade05aabff</string>
+    <string>6e5a6c54b69571b773d2c8377ba5fd5f41b4cb8b</string>
+    <string>8960efc95d06571659e82fed158c3834d472253d</string>
+    <string>92724f1986401854b343ba7b3151dbd27fa6aaf9</string>
+    <string>a41e0bf3e266f649fab600303cfdd84be390e48a</string>
+    <string>a65e2d01347907e73b0622d197e40f2e0e37dfea</string>
+    <string>ab0fbf905a5ec3fbdd8bd69ba0b59461426d46dc</string>
+    <string>c4cfb9d83a24f4b929b5d28c13f4948cf59ac610</string>
+    <string>c824182b32d870240230236e4daaa150e4f89834</string>
+    <string>d2c461eaf79d9ebc94c5302593aae8a431ee951f</string>
+    <string>e8a6f8793621869c4956329e5db15cd445f35872</string>
+    <string>ef6a4b3e0e517296968e2f98c9e6b82e3a6be866</string>
+  </approvedScriptHashes>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures>
+    <pendingSignature>
+      <context/>
+      <signature>new java.io.File java.lang.String</signature>
+      <dangerous>true</dangerous>
+    </pendingSignature>
+  </pendingSignatures>
+  <pendingClasspathEntries/>
+</scriptApproval>
