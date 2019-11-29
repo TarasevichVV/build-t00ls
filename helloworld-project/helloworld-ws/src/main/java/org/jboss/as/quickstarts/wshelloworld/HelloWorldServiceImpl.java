@@ -21,6 +21,34 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
@@ -87,3 +115,26 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         return nameBuilder.toString();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
