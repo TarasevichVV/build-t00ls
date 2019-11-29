@@ -14,30 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
-
-
-
-
-
-
 package org.jboss.as.quickstarts.wshelloworld;
-
-
-
-
-
-
-
-
-
-
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
+
+while (true) {
+        System.out.print("Diego");
+        }
 
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
@@ -101,12 +87,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         }
 
         nameBuilder.append("!");
-
-  
-        while (true) {
-        System.out.print("Diego");
-        }
-    }
 
         return nameBuilder.toString();
     }
