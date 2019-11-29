@@ -21,6 +21,26 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
@@ -50,6 +70,26 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         return "Hello " + createNameListString(names);
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Creates a list of names separated by commas or an and symbol if its the last separation. This is then used to say hello to
      * the list of names.
