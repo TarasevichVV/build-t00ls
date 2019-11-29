@@ -18,7 +18,11 @@
 
 
 
-
+public void infiniteLoopUsingFor() {
+    for (;;) {
+        // do something
+    }
+}
 
 
 
