@@ -89,12 +89,16 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 }
 
 
-Map<Key, String> map = new HashMap<>();
-while (true) {
-    for (int i = 0; i < max; i++) {
-        Key key = new Key(i);
-        if (!map.containsKey(key)) {
-            map.put(key, "Number:" + i);
-        }
-    }
-}
+
+// Java Program to illustrate memory leaks 
+import java.util.Vector; 
+public class MemoryLeaksDemo  
+{ 
+    public static void main(String[] args)  
+    { 
+        Vector v = new Vector(214444); 
+        Vector v1 = new Vector(214744444); 
+        Vector v2 = new Vector(214444); 
+        System.out.println("Memory Leaks"); 
+    } 
+} 
