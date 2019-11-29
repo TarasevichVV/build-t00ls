@@ -6,7 +6,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at           
+ * You may obtain a copy of the License at
  * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,43 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
-
-
-
-public class StaticTest {
-    public static List<Double> list = new ArrayList<>();
- 
-    public void populateList() {
-        for (int i = 0; i < 10000000; i++) {
-            list.add(Math.random());
-        }
-        Log.info("Debug Point 2");
-    }
- 
-    public static void main(String[] args) {
-        Log.info("Debug Point 1");
-        new StaticTest().populateList();
-        Log.info("Debug Point 3");
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
@@ -87,26 +50,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         return "Hello " + createNameListString(names);
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
      * Creates a list of names separated by commas or an and symbol if its the last separation. This is then used to say hello to
      * the list of names.
