@@ -52,7 +52,13 @@ class whileLoopDemo
  x++;}
 }
 }
-
+public class StaticExample1 {
+    public int number;  // instance variable
+ 
+    public static void main(String[] args) {
+        number = 30;    // compile error
+    }
+}
 
 public interface HelloWorldService {
 
