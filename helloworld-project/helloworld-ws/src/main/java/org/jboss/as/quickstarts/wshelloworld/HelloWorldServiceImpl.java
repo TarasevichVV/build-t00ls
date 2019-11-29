@@ -49,14 +49,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String sayHelloToNames(final List<String> names) {
         return "Hello " + createNameListString(names);
     }
-    @Override
-    public String sayHelloToNames(final List<String> names) {
-        return "Hello " + createNameListString(names);
-    }
-    @Override
-    public String sayHelloToNames(final List<String> names) {
-        return "Hello " + createNameListString(names);
-    }
 
     /**
      * Creates a list of names separated by commas or an and symbol if its the last separation. This is then used to say hello to
@@ -86,14 +78,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
                 nameBuilder.append(", ");
             else if (i != 0 && i == names.size() - 1)
                 nameBuilder.append(" & ");
-            if (i != 0 && i != names.size() - 1)
-                nameBuilder.append(", ");
-            else if (i != 0 && i == names.size() - 1)
-                nameBuilder.append(" & ");
-            if (i != 0 && i != names.size() - 1)
-                nameBuilder.append(", ");
-            else if (i != 0 && i == names.size() - 1)
-                nameBuilder.append(" & ");
 
             nameBuilder.append(names.get(i));
         }
@@ -101,97 +85,5 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         nameBuilder.append("!");
 
         return nameBuilder.toString();
-    }
-}
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-public class FindDuplicate {
-    private static void findDuplicate(List<Integer> elements) {
-
-        int distinctSum = elements.stream().distinct().mapToInt(e -> e).sum();
-// Find the sum of all list elements
-        int totalSum = elements.stream().mapToInt(e -> e).sum();
-        System.out.println("The repeated element is: " + (totalSum - distinctSum));
-    }
-
-    public static void main(String[] args) {
-// Create a list of sequential elements in the interval [1..101).
-        List <Integer> elements = IntStream.range(1, 101).boxed().collect(Collectors.toList());
-// Add the value 23 at index 53
-        elements.set(53, 23);
-        findDuplicate(elements);
-    }
-}
-//BUG1
-String x = "a test";
-String y = new String("a test");
-System.out.println(x==y); //prints false
-System.out.println(x.equals(y)); //prints true
-
-//BUG2
-Contact c = new Contact();
-//results in a null pointer exception if getFirstName returns null
-String name = c.getFirstName().toLowerCase();
-
-//BUG3
-public void setFirstName(String firstName) {
-  this.firstName = firstName;
-}
-// Hidden problem. Now the firstName instance variable is never set.
-public void setFirstName(String firstName) {
-  firstName = firstName;
-}
-
-//BUG4
-HashSet currentMessages = new HashSet();
-while (moreMessages()){
-  Message message = getNextMessage();
-  currentMessages.add(message.getID(), message);
-  //do work with message
-}
-
-//BUG5
-public class NonConcurrentServlet extends HttpServlet
-{
-  String name;
-  public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
-    PrintWriter out = response.getWriter();
-    response.setContentType("text/html");
-    userName = request.getParameter("name");
-    out.println("<html><body>");
-    out.println("<h1>Hello, "+name+"</h1>");
-    out.println("</body></html>");
-  }
-}
-
-//BUG6
-FileSystemXmlApplicationContext context =
-new FileSystemXmlApplicationContext("spring-beans.xml");
-// is the salescontacts bean really going to be a ContactList??
-ContactList list = (ContactList) context.getBean("salescontacts");
-
-public class DigestUtils {
-    /**
-     * Compares two digests for equality. Does a simple byte compare.
-     *
-     * @param digesta one of the digests to compare.
-     *
-     * @param digestb the other digest to compare.
-     *
-     * @return true if the digests are equal, false otherwise.
-     */
-    public static boolean isEqual(byte digesta[], byte digestb[]) {
-        if (digesta.length != digestb.length)
-            return false;
-
-        for (int i = 0; i < digesta.length; i++) {
-            if (digesta[i] != digestb[i]) {
-                return false;
-            }
-        }
-        return true;
     }
 }
