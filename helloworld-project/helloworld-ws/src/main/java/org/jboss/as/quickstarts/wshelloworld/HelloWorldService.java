@@ -80,7 +80,11 @@ public interface HelloWorldService {
      * @return the number of current bookings
      */
 
-
+public void infiniteLoopUsingDoWhile() {
+    do {
+        // do something
+    } while (true);
+}
 
 
 
