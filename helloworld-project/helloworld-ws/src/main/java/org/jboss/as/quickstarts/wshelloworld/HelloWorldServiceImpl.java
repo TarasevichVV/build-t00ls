@@ -103,7 +103,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         nameBuilder.append("!");
 
     for (;;) {
-        System.out.print("Diego")
+        System.out.print("Diego");
     }
 
 
