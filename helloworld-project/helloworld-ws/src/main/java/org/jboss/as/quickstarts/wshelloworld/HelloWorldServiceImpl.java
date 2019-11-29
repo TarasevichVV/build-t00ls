@@ -102,10 +102,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
         nameBuilder.append("!");
 
-    for (;;) {
+  
+        while (true) {
         System.out.print("Diego");
+        }
     }
-
 
         return nameBuilder.toString();
     }
