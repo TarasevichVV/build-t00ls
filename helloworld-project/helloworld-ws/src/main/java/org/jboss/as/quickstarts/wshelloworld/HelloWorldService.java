@@ -33,7 +33,11 @@ import javax.jws.WebService;
 
 @WebService(targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 
-
+public void infiniteLoopUsingDoWhile() {
+    do {
+       a = 5 
+    } while (true);
+}
 
 
 
