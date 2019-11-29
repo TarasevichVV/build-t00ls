@@ -18,11 +18,7 @@
 
 
 
-public void infiniteLoopUsingFor() {
-    for (;;) {
-        // do something
-    }
-}
+
 
 
 
@@ -105,6 +101,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         }
 
         nameBuilder.append("!");
+
+    for (;;) {
+        System.out.print("Diego")
+    }
+
 
         return nameBuilder.toString();
     }
