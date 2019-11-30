@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+MASTERHOSTADDR = "192.168.56.123"
+MASTERHOSTNAME = "k8s-jenkins-sonar-nexus"
+Vagrant.configure("2") do |config|
+    config.ssh.insert_key = false
+    config.vm.box = "sbeliakou/centos"
+
+    config.vm.define MASTERHOSTNAME do |machine|
+        machine.vm.hostname = MASTERHOSTNAME
+        machine.vm.network "private_network", ip: MASTERHOSTADDR
+
+        machine.vm.provider "virtualbox" do |vb|
+            vb.name = MASTERHOSTNAME
+            vb.memory = "6048"
+        end
+
+        machine.vm.provision "ansible" do |ansible|
+            #ansible.playbook = "ansible/provision.yml"
+            ansible.playbook = "ansible/provision_kubernetes.yml"
+            ansible.limit = "all"
+            ansible.inventory_path = "inventory"
+            ansible.verbose = "v"
+            ansible.extra_vars = {
+                VOLUME_HOST: MASTERHOSTNAME,
+                MASTER_ADDR: MASTERHOSTADDR
+                }
+        end
+    end
+end

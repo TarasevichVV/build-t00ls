@@ -1,0 +1,5 @@
+---
+namespace: sonar
+WORK_FOLDER: /opt
+SONAR_FOLDER: /opt/sonar
+PGSQL_FOLDER: /opt/postgresql

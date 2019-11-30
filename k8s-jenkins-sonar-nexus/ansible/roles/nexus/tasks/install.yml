@@ -1,0 +1,22 @@
+
+- name: Deploying NEXUS's Persistent Volume (Claim)
+  shell: |
+    kubectl apply -f "{{ item }}"
+  with_items:
+  - "{{ WORK_FOLDER }}/pv-nexus.yml"
+  - "{{ WORK_FOLDER }}/pvc-nexus.yml"
+
+- name: Deploying NEXUS
+  shell: |
+    kubectl apply -f "{{ item }}"
+  with_items:
+  - "{{ WORK_FOLDER }}/dep-nexus.yml"
+  - "{{ WORK_FOLDER }}/svc-nexus.yml"
+
+- name: Create Ingress rule for NEXUS
+  shell: |
+    kubectl apply -f "{{ WORK_FOLDER }}/ing-nexus.yml"
+
+- name: Create Service Account for "{{ namespace }}"
+  shell: |
+    kubectl create clusterrolebinding "{{ namespace }}" --clusterrole cluster-admin --serviceaccount=nexus:default

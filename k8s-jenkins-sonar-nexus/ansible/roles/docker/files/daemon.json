@@ -1,0 +1,11 @@
+{
+    "insecure-registries": [
+        "192.168.56.250:20000",
+        "docker.nexus",
+        "nexus-service.nexus:20000"
+    ],
+    "exec-opts": [
+        "native.cgroupdriver=systemd"
+    ]
+}
+

@@ -1,0 +1,9 @@
+- name: Install k8s-jenkins-sonar node
+  hosts: master
+  # vars:
+  #   VOLUME_HOST: k8s-jenkins-sonar
+  roles:
+  - kubernetes
+  - kubernetes-jenkins
+  - sonar
+  - nexus

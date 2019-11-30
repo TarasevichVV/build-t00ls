@@ -1,0 +1,60 @@
+- name: Create namespace "{{ namespace }}"
+  shell: |
+    kubectl create namespace "{{ namespace }}"
+  ignore_errors: yes
+
+- name: Create "{{ WORK_FOLDER }}"
+  file:
+    path: "{{ WORK_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Create "{{ NEXUS_FOLDER }}"
+  file:
+    path: "{{ NEXUS_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Copy '*.yml' files for deploying NEXUS
+  copy:
+    src: "{{ item }}"
+    dest: "{{ WORK_FOLDER }}"
+  with_items:
+  #- pv-nexus.yml
+  - pvc-nexus.yml
+  - dep-nexus.yml
+  - svc-nexus.yml
+  - ing-nexus.yml
+
+- name: Make pv-nexus.yml for NEXUS
+  shell: |
+    cat << EOF > "{{ WORK_FOLDER }}/pv-nexus.yml"
+      apiVersion: v1
+      kind: PersistentVolume
+      metadata:
+        name: nexus-pv
+        namespace: nexus
+      spec:
+        nodeAffinity:
+          required:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - "{{ VOLUME_HOST }}"
+        capacity:
+          storage: 4Gi
+        accessModes:
+        - ReadWriteOnce
+        persistentVolumeReclaimPolicy: Retain
+        storageClassName: nexus-storage
+        local:
+          path: /opt/nexus
+    EOF

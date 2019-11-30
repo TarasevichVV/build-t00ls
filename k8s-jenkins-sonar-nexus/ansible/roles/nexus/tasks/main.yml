@@ -1,0 +1,6 @@
+---
+- name: Create nexus namespace
+  include_tasks: pre-install.yml
+
+- name: Deploying nexus
+  include_tasks: install.yml

@@ -1,0 +1,106 @@
+- name: Create namespace "{{ namespace }}"
+  shell: |
+    kubectl create namespace "{{ namespace }}"
+  ignore_errors: yes
+
+- name: Create "{{ WORK_FOLDER }}"
+  file:
+    path: "{{ WORK_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Create "{{ PGSQL_FOLDER }}"
+  file:
+    path: "{{ PGSQL_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Create "{{ SONAR_FOLDER }}"
+  file:
+    path: "{{ SONAR_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Copy '*.yml' files for deploying PGSQL
+  copy:
+    src: "{{ item }}"
+    dest: "{{ WORK_FOLDER }}"
+  with_items:
+  #- pv-psql.yml
+  - pvc-psql.yml
+  - dep-psql.yml
+  - svc-psql.yml
+
+- name: Copy '*.yml' files for deploying SONAR
+  copy:
+    src: "{{ item }}"
+    dest: "{{ WORK_FOLDER }}"
+  with_items:
+  #- pv-sonar.yml
+  - pvc-sonar.yml
+  - dep-sonar.yml
+  - svc-sonar.yml
+  - ing-sonar.yml
+
+- name: Make pv-psql.yml for SONAR
+  shell: |
+    cat << EOF > "{{ WORK_FOLDER }}/pv-psql.yml"
+      apiVersion: v1
+      kind: PersistentVolume
+      metadata:
+        name: postgresql-pv
+        namespace: sonar
+      spec:
+        nodeAffinity:
+          required:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - "{{ VOLUME_HOST }}"
+        capacity:
+          storage: 2Gi
+        accessModes:
+        - ReadWriteOnce
+        persistentVolumeReclaimPolicy: Retain
+        storageClassName: postgresql-storage
+        local:
+          path: /opt/postgresql
+    EOF
+
+- name: Make pv-psql.yml for SONAR
+  shell: |
+    cat << EOF > "{{ WORK_FOLDER }}/pv-sonar.yml"
+    apiVersion: v1
+    kind: PersistentVolume
+    metadata:
+      name: sonarqube-pv-data
+      namespace: sonar
+    spec:
+      nodeAffinity:
+        required:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+              - "{{ VOLUME_HOST }}"
+      capacity:
+        storage: 1Gi
+      accessModes:
+      - ReadWriteOnce
+      persistentVolumeReclaimPolicy: Retain
+      storageClassName: sonarqube-data-storage
+      local:
+        path: /opt/sonar
+    EOF

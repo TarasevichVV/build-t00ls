@@ -1,0 +1,4 @@
+---
+namespace: nexus
+WORK_FOLDER: /opt
+NEXUS_FOLDER: /opt/nexus

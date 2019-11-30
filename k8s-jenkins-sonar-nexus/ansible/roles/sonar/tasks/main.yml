@@ -1,0 +1,6 @@
+---
+- name: Create Sonar namespace
+  include_tasks: pre-install.yml
+
+- name: Deploying Sonar
+  include_tasks: install.yml

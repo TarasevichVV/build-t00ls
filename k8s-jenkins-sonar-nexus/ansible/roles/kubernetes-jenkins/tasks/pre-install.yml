@@ -1,0 +1,51 @@
+- name: Create namespace "{{ namespace }}"
+  shell: |
+    kubectl create namespace "{{ namespace }}"
+  ignore_errors: yes
+
+- name: Create "{{ JENKINS_FOLDER }}"
+  file:
+    path: "{{ JENKINS_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
+- name: Copy '*.yml' files for deploying Jenkins
+  copy:
+    src: "{{ item }}"
+    dest: "{{ JENKINS_FOLDER }}"
+  with_items:
+ # - persistent_volume.yml
+  - persistent_volume_claim.yml
+  - deployment.yml
+  - service.yml
+  - ingress.yml
+
+- name: Make persistent_volume.yml for Jenkins
+  shell: |
+    cat << EOF > "{{ JENKINS_FOLDER }}/persistent_volume.yml"
+      apiVersion: v1
+      kind: PersistentVolume
+      metadata:
+        name: jenkins-pv
+        namespace: jenkins
+      spec:
+        nodeAffinity:
+          required:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - "{{ VOLUME_HOST }}"
+        capacity:
+          storage: 7Gi
+        accessModes:
+        - ReadWriteOnce
+        persistentVolumeReclaimPolicy: Retain
+        storageClassName: jenkins-storage
+        local:
+          path: /opt/jenkins
+    EOF
