@@ -9,8 +9,9 @@ metadata:
 spec:
   selector:
     app: nexus
-  type: LoadBalancer
-#  loadBalancerIP: 192.168.56.254
+  type: ClusterIP
+  # type: LoadBalancer
+  # loadBalancerIP: 192.168.56.254
   ports:
   - name: nexus-svc
     protocol: TCP
