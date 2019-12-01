@@ -1,16 +1,4 @@
 <settings>
-  <!-- the path to the local repository - defaults to ~/.m2/repository
-  -->
-  <!-- <localRepository>/path/to/local/repo</localRepository>
-  -->
- <!--   <mirrors>
-    <mirror> <!--Send all requests to the public group -->
-      <id>nexus</id>
-      <mirrorOf>*</mirrorOf>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-central/</url>
-    </mirror>
-  </mirrors> 
--->
   <activeProfiles>
     <!--make the profile active all the time -->
     <activeProfile>nexus</activeProfile>
