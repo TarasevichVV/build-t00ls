@@ -92,7 +92,7 @@
             <extensions>true</extensions>
             <configuration>
                 <serverId>nexus</serverId>
-                <nexusUrl>http://nexus-service.nexus-ns.svc.cluster.local:8081</nexusUrl>
+                <nexusUrl>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/epam/</nexusUrl>
             </configuration>
             </plugin>
         </plugins>
