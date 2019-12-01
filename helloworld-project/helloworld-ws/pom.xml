@@ -28,12 +28,6 @@
     <packaging>war</packaging>
     <name>${qs.name.prefix} helloworld-ws</name>
     <description>This project demonstrates a Hello World JAX-WS web service</description>
-    <distributionManagement>
-      <snapshotRepository>
-        <id>nexus</id>
-        <url>http://nexus-service.nexus.svc.cluster.local/repository/maven-snapshots/</url>
-      </snapshotRepository>
-    </distributionManagement>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -41,17 +35,6 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <repositories>
-
-            <repository>
-            
-            <id>maven-group</id>
-            
-            <url>http://nexus-service.nexus.svc.cluster.local/repository/maven-group/</url>
-            
-            </repository>
-            
-            </repositories>
     <properties>
         <!-- Remote Server URL -->
         <remote.server.url>http://localhost:8080/</remote.server.url>
@@ -105,7 +88,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <serverId>nexus</serverId>
-                        <nexusUrl>http://nexus-service.nexus.svc.cluster.local</nexusUrl>
+                        <nexusUrl>http://nexus</nexusUrl>
                     </configuration>
                 </plugin>
         </plugins>
