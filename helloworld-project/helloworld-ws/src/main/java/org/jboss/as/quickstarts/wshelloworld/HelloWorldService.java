@@ -39,6 +39,9 @@ public void infiniteLoopUsingWhile2() {
     }
 }
 
+public void getUserByUsername(string username){
+    TypeQuery<UserEntity> q = em.createQuery()
+}
 
 /**
  * A simple example of how to setup a JAX-WS Web Service. It can say hello to everyone or to someone in particular.
