@@ -32,11 +32,11 @@
     <distributionManagement>
     <repository>
       <id>releases</id>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repositories/epam/</url>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/content/repositories/epam/</url>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repositories/epam/</url>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/content/repositories/epam/</url>
     </snapshotRepository>
   </distributionManagement>
 
