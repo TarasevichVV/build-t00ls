@@ -27,6 +27,18 @@ public void infiniteLoopUsingWhile() {
     }
 }
 
+public void infiniteLoopUsingWhile1() {
+    while (true) {
+        println('TEst')
+    }
+}
+
+public void infiniteLoopUsingWhile2() {
+    while (true) {
+        println('TEst')
+    }
+}
+
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
