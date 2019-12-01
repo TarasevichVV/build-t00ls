@@ -1,11 +1,27 @@
-<!--<settings> /-->
+<settings>
+  <!-- the path to the local repository - defaults to ~/.m2/repository
+  -->
+  <!-- <localRepository>/path/to/local/repo</localRepository>
+  -->
+    <mirrors>
+    <mirror> <!--Send all requests to the public group -->
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/epam/</url>
+    </mirror>
+  </mirrors>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
   <profiles>
     <profile>
       <id>nexus</id>
+      <!--Override the repository (and pluginRepository) "central" from the Maven Super POM
+          to activate snapshots for both! -->
       <repositories>
         <repository>
-          <id>epam</id>
-          <name>nexus-repo</name>
+          <id>central</id>
           <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
           <releases>
             <enabled>true</enabled>
@@ -17,8 +33,7 @@
       </repositories>
       <pluginRepositories>
         <pluginRepository>
-          <id>epam</id>
-          <name>nexus-repo</name>
+          <id>central</id>
           <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
           <releases>
             <enabled>true</enabled>
@@ -30,7 +45,16 @@
       </pluginRepositories>
     </profile>
   </profiles>
-  <activeProfiles>
-    <activeProfile>nexus</activeProfile>
-  </activeProfiles>
-<!--</settings> /-->
+
+  <pluginGroups>
+    <pluginGroup>org.sonatype.plugins</pluginGroup>
+  </pluginGroups>
+
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>jenkins</username>
+      <password>12345</password>
+    </server>
+  </servers>
+</settings>
