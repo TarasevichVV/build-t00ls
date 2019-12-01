@@ -21,6 +21,12 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+public void infiniteLoopUsingWhile() {
+    while (true) {
+        println('TEst')
+    }
+}
+
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
