@@ -32,6 +32,17 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+ /*
+ *
+ *
+ * duplicate atrings and loop
+ */
+import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
 /**
  * Simple set of tests for the HelloWorld Web Service to demonstrate accessing the web service using a client
  *
@@ -106,4 +117,7 @@ public class ClientArqIT {
 
         System.out.println("[WebService] " + response);
     }
+while (true){
+System.out.println("LOOP " + response);
+}
 }
