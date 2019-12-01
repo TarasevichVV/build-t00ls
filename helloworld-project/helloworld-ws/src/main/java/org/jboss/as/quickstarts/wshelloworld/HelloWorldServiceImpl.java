@@ -59,6 +59,19 @@ public class HelloWorldServiceImpl implements HelloWorldService {
      * @param names A list of names
      * @return The list of names separated as described above.
      */
+{ 
+    public static void main(String args[]) 
+    { 
+        int x = 1; 
+  
+        while (x > 0)
+{ 
+            System.out.println("Value of x:" + x);
+ x++;}
+}
+}
+
+
     private String createNameListString(final List<String> names) {
 
         /*
