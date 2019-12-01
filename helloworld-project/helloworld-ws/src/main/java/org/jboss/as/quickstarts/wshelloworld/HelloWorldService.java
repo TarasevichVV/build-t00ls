@@ -30,14 +30,13 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+while (true){
+console.log("LOOP");
+}
 
 @WebService(targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 public interface HelloWorldService {
 
-/* LOOP */
-while (true){
-System.out.println("PERMANENT LOOP");
-}
     /**
      * Say hello as a response
      *
