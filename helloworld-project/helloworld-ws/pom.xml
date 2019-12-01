@@ -97,24 +97,26 @@
     <build>
         <!-- Set the name of the WAR, used as the context root when the app is deployed -->
         <finalName>${project.artifactId}</finalName>
-        <plugin>
-           <groupId>org.sonatype.plugins</groupId>
-           <artifactId>nexus-staging-maven-plugin</artifactId>
-           <version>1.5.1</version>
-           <executions>
-              <execution>
-                 <id>default-deploy</id>
-                 <phase>deploy</phase>
-                 <goals>
-                    <goal>deploy</goal>
-                 </goals>
-              </execution>
-           </executions>
-           <configuration>
-              <serverId>nexus</serverId>
-              <nexusUrl>http://nexus-service.nexus-ns.svc.cluster.local:8081</nexusUrl>
-              <skipStaging>true</skipStaging>
-           </configuration>
-        </plugin>
+        <plugins>
+            <plugin>
+               <groupId>org.sonatype.plugins</groupId>
+               <artifactId>nexus-staging-maven-plugin</artifactId>
+               <version>1.5.1</version>
+               <executions>
+                  <execution>
+                     <id>default-deploy</id>
+                     <phase>deploy</phase>
+                     <goals>
+                        <goal>deploy</goal>
+                     </goals>
+                  </execution>
+               </executions>
+               <configuration>
+                  <serverId>nexus</serverId>
+                  <nexusUrl>http://nexus-service.nexus-ns.svc.cluster.local:8081</nexusUrl>
+                  <skipStaging>true</skipStaging>
+               </configuration>
+            </plugin>
+          </plugins>  
     </build>
 </project>
