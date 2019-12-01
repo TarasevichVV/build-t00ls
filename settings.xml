@@ -1,34 +1,36 @@
-<profiles>
-  <profile>
-    <id>nexus</id>
-    <repositories>
-      <repository>
-        <id>epam</id>
-        <name>nexus-repo</name>
-        <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-    </repositories>
-    <pluginRepositories>
-      <pluginRepository>
-        <id>epam</id>
-        <name>nexus-repo</name>
-        <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </pluginRepository>
-    </pluginRepositories>
-  </profile>
-</profiles>
-<activeProfiles>
-  <activeProfile>nexus</activeProfile>
-</activeProfiles>
+<settings>
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>epam</id>
+          <name>nexus-repo</name>
+          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>epam</id>
+          <name>nexus-repo</name>
+          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+</settings>
