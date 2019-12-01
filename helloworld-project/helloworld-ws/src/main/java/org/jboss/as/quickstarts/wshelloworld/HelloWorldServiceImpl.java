@@ -32,7 +32,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
     @Override
     public String sayHello() {
-      while true
+      while (true)
         do
         {
           print "test";
