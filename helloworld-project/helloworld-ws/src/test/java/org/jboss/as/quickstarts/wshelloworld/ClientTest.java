@@ -28,6 +28,28 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+public void infiniteLoopUsingWhile() {
+    while (true) {
+        println('TEst')
+    }
+}
+
+public void infiniteLoopUsingWhile1() {
+    while (true) {
+        println('TEstwerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr') /*     */
+    }
+}
+
+public void infiniteLoopUsingWhile2() {
+    while (true) {
+        println('TEst')
+    }
+}
+
+public void getUserByUsername(string username){
+    TypeQuery<UserEntity> q = em.createQuery()
+
+
 /**
  * Simple set of tests for the HelloWorld Web Service to demonstrate accessing the web service using a client
  *
