@@ -1,4 +1,4 @@
-<settings>
+<!--<settings> /-->
   <profiles>
     <profile>
       <id>nexus</id>
@@ -33,4 +33,4 @@
   <activeProfiles>
     <activeProfile>nexus</activeProfile>
   </activeProfiles>
-</settings>
+<!--</settings> /-->
