@@ -28,7 +28,12 @@
     <packaging>war</packaging>
     <name>${qs.name.prefix} helloworld-ws</name>
     <description>This project demonstrates a Hello World JAX-WS web service</description>
-
+    <distributionManagement>
+      <snapshotRepository>
+        <id>nexus</id>
+        <url>http://nexus/repository/maven-napshots/</url>
+      </snapshotRepository>
+    </distributionManagement>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -82,6 +87,18 @@
     </dependencies>
 
     <build>
+        <plugins>
+                <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>1.6.3</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <serverId>nexus</serverId>
+                        <nexusUrl>http://nexus/</nexusUrl>
+                    </configuration>
+                </plugin>
+        </plugins>
         <!-- Set the name of the WAR, used as the context root when the app is deployed -->
         <finalName>${project.artifactId}</finalName>
     </build>

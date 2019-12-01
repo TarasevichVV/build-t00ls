@@ -21,9 +21,6 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-while (true) {
-        System.out.print("Diego");
-        }
 
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
