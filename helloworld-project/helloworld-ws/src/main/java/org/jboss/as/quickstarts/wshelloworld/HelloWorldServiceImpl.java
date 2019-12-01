@@ -34,7 +34,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String sayHello() {
       while (true)
       {
-        pause(1);
+        print("1");
       }
         return "Hello World!";
     }
