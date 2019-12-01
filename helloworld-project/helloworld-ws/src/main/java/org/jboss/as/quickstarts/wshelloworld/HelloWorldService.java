@@ -23,60 +23,11 @@ import javax.jws.WebService;
 /**
  * A simple example of how to setup a JAX-WS Web Service. It can say hello to everyone or to someone in particular.
  *
-
-
-
-
-
  * @author lnewson@redhat.com
  */
 
 @WebService(targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
-
-public void infiniteLoopUsingDoWhile() {
-    do {
-       a = 5 
-    } while (true);
-}
-
-
-class whileLoopDemo 
-{ 
-    public static void main(String args[]) 
-    { 
-        int x = 1; 
-  
-        while (x > 0)
-{ 
-            System.out.println("Value of x:" + x);
- x++;}
-}
-}
-public class StaticExample1 {
-    public int number;  // instance variable
- 
-    public static void main(String[] args) {
-        number = 30;    // compile error
-    }
-}
-
 public interface HelloWorldService {
-
-{
-    public static void main(String args[])
-    {
-        int x = 1;
-
-        while (x > 0)
-{           
-            System.out.println("Value of x:" + x);
- x++;}
-}
-}
-
-
-
-
 
     /**
      * Say hello as a response
@@ -95,37 +46,12 @@ public interface HelloWorldService {
     @WebMethod
     String sayHelloToName(String name);
 
-
-
-
-
-
-
-
-
     /**
      * Say hello to a list of people
      *
-
      * @param names The list of names to say hello to
      * @return the number of current bookings
      */
-
-public void infiniteLoopUsingDoWhile() {
-    do {
-        // do something
-    } while (true);
-}
-
-
-
-
     @WebMethod
     String sayHelloToNames(List<String> names);
-
-
-
-
-
-
 }

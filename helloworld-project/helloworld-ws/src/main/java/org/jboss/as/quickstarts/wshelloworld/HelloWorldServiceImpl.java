@@ -59,30 +59,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
      * @param names A list of names
      * @return The list of names separated as described above.
      */
-{ 
-    public static void main(String args[]) 
-    { 
-        int x = 1; 
-  
-        while (x > 0)
-{ 
-            System.out.println("Value of x:" + x);
- x++;}
-}
-}
-a = true;
-if (a) { // Noncompliant
-  doSomething();
-}
-
-if (b && a) { // Noncompliant; "a" is always "true"
-  doSomething();
-}
-
-if (c || !a) { // Noncompliant; "!a" is always "false"
-  doSomething();
-}
-
     private String createNameListString(final List<String> names) {
 
         /*
@@ -110,28 +86,4 @@ if (c || !a) { // Noncompliant; "!a" is always "false"
 
         return nameBuilder.toString();
     }
-}
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import sun.misc.Unsafe;
-
-
-public class TestUnsafe {
-
-    public static void main(String[] args) throws Exception{
-        Class unsafeClass = Class.forName("sun.misc.Unsafe");
-        Field f = unsafeClass.getDeclaredField("theUnsafe");
-        f.setAccessible(true);
-        Unsafe unsafe = (Unsafe) f.get(null);
-        System.out.print("4..3..2..1...");
-        try
-        {
-            for(;;)
-                unsafe.allocateMemory(1024*1024);
-        } catch(Error e) {
-            System.out.println("Boom :)");
-            e.printStackTrace();
-        }
-    }
-
 }
