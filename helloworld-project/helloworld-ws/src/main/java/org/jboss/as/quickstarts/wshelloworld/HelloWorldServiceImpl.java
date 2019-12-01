@@ -35,7 +35,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
       while (true)
         do
         {
-          print "test";
         }
         return "Hello World!";
     }
