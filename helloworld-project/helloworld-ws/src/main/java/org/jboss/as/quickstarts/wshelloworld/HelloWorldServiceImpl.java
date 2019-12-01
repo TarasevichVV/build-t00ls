@@ -42,7 +42,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         final List<String> names = new ArrayList<>();
         names.add(name);
         
-        final test<String> tests = ''
+        final test<String> tests = '';
 
         return sayHelloToNames(names);
     }
