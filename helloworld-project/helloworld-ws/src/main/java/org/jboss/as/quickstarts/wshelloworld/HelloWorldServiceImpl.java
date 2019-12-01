@@ -32,6 +32,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
     @Override
     public String sayHello() {
+      while true
+        do
+        {
+          print "test";
+        }
         return "Hello World!";
     }
 
@@ -42,8 +47,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         final List<String> names = new ArrayList<>();
         names.add(name);
         
-        final test<String> tests = '';
-
         return sayHelloToNames(names);
     }
 
