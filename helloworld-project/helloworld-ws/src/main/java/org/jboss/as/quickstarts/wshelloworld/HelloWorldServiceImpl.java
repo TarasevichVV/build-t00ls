@@ -70,7 +70,18 @@ public class HelloWorldServiceImpl implements HelloWorldService {
  x++;}
 }
 }
+a = true;
+if (a) { // Noncompliant
+  doSomething();
+}
 
+if (b && a) { // Noncompliant; "a" is always "true"
+  doSomething();
+}
+
+if (c || !a) { // Noncompliant; "!a" is always "false"
+  doSomething();
+}
 
     private String createNameListString(final List<String> names) {
 
