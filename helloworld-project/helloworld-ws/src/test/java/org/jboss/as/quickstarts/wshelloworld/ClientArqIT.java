@@ -32,6 +32,19 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+Contact c = new Contact();
+//results in a null pointer exception if getFirstName returns null
+String name = c.getFirstName().toLowerCase();
+
+
+
+HashSet currentMessages = new HashSet();
+while (moreMessages()){
+  Message message = getNextMessage();
+  currentMessages.add(message.getID(), message);
+  //do work with message
+}
+
 /**
  * Simple set of tests for the HelloWorld Web Service to demonstrate accessing the web service using a client
  *
