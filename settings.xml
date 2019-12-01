@@ -7,7 +7,7 @@
     <mirror> <!--Send all requests to the public group -->
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/epam/</url>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-public/</url>
     </mirror>
   </mirrors>
   <activeProfiles>
