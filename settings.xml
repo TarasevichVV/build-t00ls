@@ -10,8 +10,8 @@
           to activate snapshots for both! -->
       <repositories>
         <repository>
-          <id>epam</id>
-          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/epam/</url>
+          <id>karma</id>
+          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/karma/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -22,8 +22,8 @@
       </repositories>
       <pluginRepositories>
         <pluginRepository>
-          <id>epam</id>
-          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/epam/</url>
+          <id>karma-p</id>
+          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/karma-p/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
