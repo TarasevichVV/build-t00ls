@@ -23,7 +23,7 @@ import javax.jws.WebService;
 
 public void infiniteLoopUsingWhile() {
     while (true) {
-        println('TEst')
+     
     }
 }
 
@@ -38,6 +38,7 @@ public void infiniteLoopUsingWhile2() {
         println('TEst')
     }
 }
+a = infiniteLoopUsingWhile()
 
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.

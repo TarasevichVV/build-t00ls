@@ -21,27 +21,6 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 
-public void infiniteLoopUsingWhile() {
-    while (true) {
-        println('TEst')
-    }
-}
-
-public void infiniteLoopUsingWhile1() {
-    while (true) {
-        println('TEstwerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr') /*     */
-    }
-}
-
-public void infiniteLoopUsingWhile2() {
-    while (true) {
-        println('TEst')
-    }
-}
-
-public void getUserByUsername(string username){
-    TypeQuery<UserEntity> q = em.createQuery()
-
 
 /**
  * A simple example of how to setup a JAX-WS Web Service. It can say hello to everyone or to someone in particular.
