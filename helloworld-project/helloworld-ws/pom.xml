@@ -31,7 +31,7 @@
     <distributionManagement>
       <snapshotRepository>
         <id>nexus</id>
-        <url>http://nexus/repository/maven-napshots/</url>
+        <url>http://nexus-service.nexus.svc.cluster.local/repository/maven-snapshots/</url>
       </snapshotRepository>
     </distributionManagement>
     <licenses>
@@ -41,7 +41,17 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <repositories>
 
+            <repository>
+            
+            <id>maven-group</id>
+            
+            <url>http://nexus-service.nexus.svc.cluster.local/repository/maven-group/</url>
+            
+            </repository>
+            
+            </repositories>
     <properties>
         <!-- Remote Server URL -->
         <remote.server.url>http://localhost:8080/</remote.server.url>
@@ -95,7 +105,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <serverId>nexus</serverId>
-                        <nexusUrl>http://nexus/</nexusUrl>
+                        <nexusUrl>http://nexus-service.nexus.svc.cluster.local</nexusUrl>
                     </configuration>
                 </plugin>
         </plugins>
