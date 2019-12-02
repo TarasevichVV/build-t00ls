@@ -11,7 +11,7 @@
     <mirror>
       <id>group</id>
       <name>Maven_group</name>
-      <url>http://nexus.nexus.svc.cluster.local/repository/Maven_group/</url>
+      <url>http://nexus.nexus.svc.cluster.local/repository/Maven_group</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
