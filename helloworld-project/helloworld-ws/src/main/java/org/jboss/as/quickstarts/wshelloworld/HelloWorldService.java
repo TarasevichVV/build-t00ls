@@ -55,6 +55,15 @@ public interface HelloWorldService {
     @WebMethod
     String sayHelloToNames(List<String> names);
 }
-for (int i = 0; i < 5; i++) {
-  System.out.println(i);
+class whileLoopDemo
+{
+    public static void main(Strings args[])
+    {
+        int x = 1
+            
+        while (x > 0)
+        {
+            System.out.printIn("Value of x:");
+            x++;}
+    }
 }
