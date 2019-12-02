@@ -1,12 +1,4 @@
 <settings>
-  <servers>
-    <server>
-      <id>nexus-hosted</id>
-      <username>admin</username>
-      <password>admin</password>
-    </server>
-   </servers>
-
   <mirrors>
     <mirror>
       <id>group</id>
@@ -15,4 +7,11 @@
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
+  <servers>
+    <server>
+      <id>nexus-hosted</id>
+      <username>admin</username>
+      <password>admin</password>
+    </server>
+   </servers> 
 </settings>
