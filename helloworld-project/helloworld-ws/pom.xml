@@ -80,18 +80,6 @@
     </dependencies>
 
     <build>
-        <plugins>
-                <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>1.6.3</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <serverId>nexus</serverId>
-                        <nexusUrl>http://192.168.56.243</nexusUrl>
-                    </configuration>
-                </plugin>
-        </plugins>
         <!-- Set the name of the WAR, used as the context root when the app is deployed -->
         <finalName>${project.artifactId}</finalName>
     </build>
