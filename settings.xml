@@ -1,17 +1,14 @@
 <settings>
     <activeProfiles>
-      <!--make the profile active all the time -->
       <activeProfile>nexus</activeProfile>
     </activeProfiles>
     <profiles>
       <profile>
         <id>nexus</id>
-        <!--Override the repository (and pluginRepository) "central" from the Maven Super POM
-            to activate snapshots for both! -->
         <repositories>
           <repository>
             <id>maven-host</id>
-            <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/proxy-repo/</url>
+            <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/maven-host/</url>
             <releases>
               <enabled>true</enabled>
             </releases>
