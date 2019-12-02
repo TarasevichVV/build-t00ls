@@ -50,8 +50,8 @@
   <servers>
     <server>
       <id>nexus</id>
-      <username>admin</username>
-      <password>12345</password>
+      <username>jenkins</username>
+      <password>jenkins</password>
     </server>
   </servers>
 </settings>
