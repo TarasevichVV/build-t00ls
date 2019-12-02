@@ -4,7 +4,7 @@
       <!--This sends everything else to /public -->
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/mvngrp/</url>
+      <url>http://nexus-service.nexus.svc.cluster.local:8081/repository/mvngrp/</url>
     </mirror>
   </mirrors>
   <activeProfiles>
@@ -19,7 +19,7 @@
       <repositories>
         <repository>
           <id>karma</id>
-          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/karma/</url>
+          <url>http://nexus-service.nexus.svc.cluster.local:8081/repository/karma/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -31,7 +31,7 @@
       <pluginRepositories>
         <pluginRepository>
           <id>karma-p</id>
-          <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/karma-p/</url>
+          <url>http://nexus-service.nexus.svc.cluster.local:8081/repository/karma-p/</url>
           <releases>
             <enabled>true</enabled>
           </releases>
