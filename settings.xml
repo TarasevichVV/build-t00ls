@@ -1,4 +1,12 @@
 <settings>
+    <mirrors>
+    <mirror>
+      <!--This sends everything else to /public -->
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://localhost:8081/repository/maven-central/</url>
+    </mirror>
+  </mirrors>
   <activeProfiles>
     <!--make the profile active all the time -->
     <activeProfile>nexus</activeProfile>
