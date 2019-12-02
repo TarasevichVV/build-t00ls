@@ -3,14 +3,14 @@
     <server>
       <id>central</id>
       <username>admin</username>
-      <password>admin</password>
+      <password>nexus</password>
     </server>
   </servers>
   <mirrors>
     <mirror>
       <id>central</id>
       <name>central</name>
-      <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/topic7/</url>
+      <url>http://nexus-service.nexus-svc.svc.cluster.local:8081/repository/maven-jenkins-group/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
