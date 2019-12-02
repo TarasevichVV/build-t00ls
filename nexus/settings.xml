@@ -1,0 +1,60 @@
+<settings>
+   <build>
+     <finalName>bird</finalName>
+   </build>
+   <mirrors>
+   <mirror>
+     <!--This sends everything else to /public -->
+     <id>nexus</id>
+     <mirrorOf>*</mirrorOf>
+     <url>http://nexus-service.nexus.svc.cluster.local/repository/groupx</url>
+   </mirror>
+ </mirrors>
+ <activeProfiles>
+   <!--make the profile active all the time -->
+   <activeProfile>nexus</activeProfile>
+ </activeProfiles>
+ <profiles>
+   <profile>
+     <id>nexus</id>
+     <!--Override the repository (and pluginRepository) "central" from the Maven Super POM
+         to activate snapshots for both! -->
+     <repositories>
+       <repository>
+         <id>nexus-x</id>
+         <url>http://nexus-service.nexus.svc.cluster.local/repository/project-y/</url>
+         <releases>
+           <enabled>true</enabled>
+         </releases>
+         <snapshots>
+           <enabled>true</enabled>
+         </snapshots>
+       </repository>
+     </repositories>
+     <pluginRepositories>
+       <pluginRepository>
+         <id>nexus-p</id>
+         <url>http://nexus-service.nexus.svc.cluster.local/repository/project-y/</url>
+         <releases>
+           <enabled>true</enabled>
+         </releases>
+         <snapshots>
+           <enabled>true</enabled>
+         </snapshots>
+       </pluginRepository>
+     </pluginRepositories>
+   </profile>
+ </profiles>
+
+ <pluginGroups>
+   <pluginGroup>org.sonatype.plugins</pluginGroup>
+ </pluginGroups>
+
+ <servers>
+   <server>
+     <id>nexus</id>
+     <username>admin</username>
+     <password>admin</password>
+   </server>
+ </servers>
+</settings>
