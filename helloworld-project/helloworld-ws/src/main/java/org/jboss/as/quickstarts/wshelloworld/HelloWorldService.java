@@ -66,3 +66,46 @@ class whileLoopDemo
  x++;}
 }
 }
+    package JavaLoops;
+    public class WhileLoopDemo 
+      {
+        public static void main(String args[])
+        {
+               int count = 1;
+               // Exits when count becomes greater than 5
+               while (count <= 5)
+                 {
+                   System.out.println("Value of count is:" + count);
+                   //increment the value of count for next iteration
+                   count++;
+                  }
+           }
+        }    package JavaLoops;
+    public class WhileLoopDemo 
+      {
+        public static void main(String args[])
+        {
+               int count = 1;
+               // Exits when count becomes greater than 5
+               while (count <= 5)
+                 {
+                   System.out.println("Value of count is:" + count);
+                   //increment the value of count for next iteration
+                   count++;
+                  }
+           }
+        }    package JavaLoops;
+    public class WhileLoopDemo 
+      {
+        public static void main(String args[])
+        {
+               int count = 1;
+               // Exits when count becomes greater than 5
+               while (count <= 5)
+                 {
+                   System.out.println("Value of count is:" + count);
+                   //increment the value of count for next iteration
+                   count++;
+                  }
+           }
+        }
