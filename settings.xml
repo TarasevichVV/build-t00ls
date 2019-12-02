@@ -1,18 +1,17 @@
 <settings>
-    <mirrors>
-      <mirror>
-        <id>nexus</id>
-        <mirrorOf>external:*</mirrorOf>
-        <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/maven-host/</url>
-      </mirror>
-    </mirrors>
+    <activeProfiles>
+      <!--make the profile active all the time -->
+      <activeProfile>nexus</activeProfile>
+    </activeProfiles>
     <profiles>
       <profile>
         <id>nexus</id>
+        <!--Override the repository (and pluginRepository) "central" from the Maven Super POM
+            to activate snapshots for both! -->
         <repositories>
           <repository>
-            <id>central</id>
-            <url>http://central</url>
+            <id>maven-host</id>
+            <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/maven-host/</url>
             <releases>
               <enabled>true</enabled>
             </releases>
@@ -21,28 +20,14 @@
             </snapshots>
           </repository>
         </repositories>
-        <pluginRepositories>
-          <pluginRepository>
-            <id>central</id>
-            <url>http://central</url>
-            <releases>
-              <enabled>true</enabled>
-            </releases>
-            <snapshots>
-              <enabled>true</enabled>
-            </snapshots>
-          </pluginRepository>
-        </pluginRepositories>
       </profile>
     </profiles>
-    <activeProfiles>
-      <activeProfile>nexus</activeProfile>
-    </activeProfiles>
+  
     <servers>
-      <server>
-        <id>nexus</id>
-        <username>admin</username>
-        <password>admin</password>
-      </server>
-    </servers>
-  </settings>
+        <server>
+          <id>nexus</id>
+          <username>admin</username>
+          <password>admin</password>
+        </server>
+      </servers>
+    </settings>
