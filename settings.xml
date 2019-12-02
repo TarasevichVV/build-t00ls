@@ -4,7 +4,7 @@
       <!--This sends everything else to /public -->
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven_pt2</url>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/mvngrp/</url>
     </mirror>
   </mirrors>
   <activeProfiles>
