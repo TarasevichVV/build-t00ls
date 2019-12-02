@@ -27,9 +27,6 @@ import javax.jws.WebService;
  * @author lnewson@redhat.com
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
 @WebService(serviceName = "HelloWorldService", portName = "HelloWorld", name = "HelloWorld", endpointInterface = "org.jboss.as.quickstarts.wshelloworld.HelloWorldService",
     targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 public class HelloWorldServiceImpl implements HelloWorldService {
@@ -95,8 +92,5 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
         return nameBuilder.toString();
     }
-while (true){
-console.log("LOOP");
-}
 
 }

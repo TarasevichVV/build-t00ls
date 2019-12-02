@@ -26,14 +26,6 @@ import javax.jws.WebService;
  * @author lnewson@redhat.com
  */
 
-/* Duplicated strings */
-import javax.jws.WebMethod;
-import javax.jws.WebService;
-
-while (true){
-console.log("LOOP");
-}
-
 @WebService(targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 public interface HelloWorldService {
 
