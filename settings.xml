@@ -20,7 +20,7 @@
     <mirror>
       <id>central</id>
       <name>central</name>
-      <url>http://nexus.nexus.svc.cluster.local:8081/repository/maven-group/</url>
+      <url>http://nexus.nexus.svc.cluster.local:8081/repository/lab-repogroup/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
