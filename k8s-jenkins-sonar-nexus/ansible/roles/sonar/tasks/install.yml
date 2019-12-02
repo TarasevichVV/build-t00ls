@@ -13,18 +13,19 @@
   - "{{ WORK_FOLDER }}/dep-psql.yml"
   - "{{ WORK_FOLDER }}/svc-psql.yml"
 
-- name: Deploying sonar's Persistent Volume (Claim)
-  shell: |
-    kubectl apply -f "{{ item }}"
-  with_items:
-  - "{{ WORK_FOLDER }}/pv-sonar.yml"
-  - "{{ WORK_FOLDER }}/pvc-sonar.yml"
+# - name: Deploying sonar's Persistent Volume (Claim)
+#   shell: |
+#     kubectl apply -f "{{ item }}"
+#   with_items:
+#   - "{{ WORK_FOLDER }}/pv-sonar.yml"
+#   - "{{ WORK_FOLDER }}/pvc-sonar.yml"
 
 - name: Deploying sonar
   shell: |
     kubectl apply -f "{{ item }}"
   with_items:
-  - "{{ WORK_FOLDER }}/dep-sonar.yml"
+  #- "{{ WORK_FOLDER }}/dep-sonar.yml"
+  - "{{ WORK_FOLDER }}/dep-sonar-hostpath.yml"
   - "{{ WORK_FOLDER }}/svc-sonar.yml"
 
 - name: Create Ingress rule for sonar

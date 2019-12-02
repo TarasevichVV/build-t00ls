@@ -1,6 +1,7 @@
 # -*- mode: ruby -*-
 MASTERHOSTADDR = "192.168.56.123"
 MASTERHOSTNAME = "k8s-jenkins-sonar-nexus"
+
 Vagrant.configure("2") do |config|
     config.ssh.insert_key = false
     config.vm.box = "sbeliakou/centos"
@@ -15,7 +16,6 @@ Vagrant.configure("2") do |config|
         end
 
         machine.vm.provision "ansible" do |ansible|
-            #ansible.playbook = "ansible/provision.yml"
             ansible.playbook = "ansible/provision_kubernetes.yml"
             ansible.limit = "all"
             ansible.inventory_path = "inventory"

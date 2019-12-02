@@ -1,8 +1,25 @@
 [masters]
-$master ansible_host=192.168.56.123
 master ansible_host="{{ MASTER_ADDR }}"
 
 [all:vars]
 ansible_user=vagrant
 ansible_private_key_file=/home/student/.vagrant.d/insecure_private_key
+
+#######initialized before in Vagrantfile
 #VOLUME_HOST=k8s-jenkins-sonar-nexus
+
+JENKINS_HOME=/opt/jenkins
+WORK_FOLDER=/opt/installtmp
+###
+JENKINS_FOLDER=/opt/jenkins
+SONAR_FOLDER=/opt/sonar
+PGSQL_FOLDER=/opt/postgresql
+NEXUS_FOLDER=/opt/nexus
+####
+JENKINS_VOLUME=/opt/jenkins
+SONAR_VOLUME=/opt/sonar
+PGSQL_VOLUME=/opt/postgresql
+NEXUS_VOLUME=/opt/nexus
+
+####
+#SONAR_VOLUME=/vagrant/volumes/sonar

@@ -29,10 +29,25 @@ spec:
         - name: sonarqube-port
           containerPort: 9000
         volumeMounts:
+        - name: sonarqube-conf
+          mountPath: /opt/sonarqube/conf
+        - name: sonarqube-extensions
+          mountPath: /opt/sonarqube/extensions
+        - name: sonarqube-logs
+          mountPath: /opt/sonarqube/logs
         - name: sonarqube-data
           mountPath: /opt/sonarqube/data
 #          mountPath: /opt/sonarqube
       volumes:
+      - name: sonarqube-conf
+        hostPath:
+          path: /opt/sonarqube/conf
+      - name: sonarqube-extensions
+        hostPath:
+          path: /opt/sonarqube/extensions
+      - name: sonarqube-logs
+        hostPath:
+          path: /opt/sonarqube/logs
       - name: sonarqube-data
-        persistentVolumeClaim:
-          claimName: sonarqube-pvc-data
+        hostPath:
+          path: /opt/sonarqube/data          

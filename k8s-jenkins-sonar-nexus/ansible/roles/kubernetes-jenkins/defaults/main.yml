@@ -1,2 +1,2 @@
 namespace: jenkins
-JENKINS_FOLDER: /opt/jenkins
+#JENKINS_FOLDER: /opt/jenkins

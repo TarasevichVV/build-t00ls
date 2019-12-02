@@ -3,6 +3,15 @@
     kubectl create namespace "{{ namespace }}"
   ignore_errors: yes
 
+- name: Create "{{ WORK_FOLDER  }}"
+  file:
+    path: "{{ WORK_FOLDER }}"
+    state: directory
+    mode: 0755
+    owner: vagrant
+    group: vagrant
+  become: yes
+
 - name: Create "{{ JENKINS_FOLDER }}"
   file:
     path: "{{ JENKINS_FOLDER }}"
@@ -15,7 +24,7 @@
 - name: Copy '*.yml' files for deploying Jenkins
   copy:
     src: "{{ item }}"
-    dest: "{{ JENKINS_FOLDER }}"
+    dest: "{{ WORK_FOLDER }}"
   with_items:
  # - persistent_volume.yml
   - persistent_volume_claim.yml
@@ -25,7 +34,7 @@
 
 - name: Make persistent_volume.yml for Jenkins
   shell: |
-    cat << EOF > "{{ JENKINS_FOLDER }}/persistent_volume.yml"
+    cat << EOF > "{{ WORK_FOLDER }}/persistent_volume.yml"
       apiVersion: v1
       kind: PersistentVolume
       metadata:
@@ -47,5 +56,5 @@
         persistentVolumeReclaimPolicy: Retain
         storageClassName: jenkins-storage
         local:
-          path: /opt/jenkins
+          path: "{{ JENKINS_VOLUME }}"
     EOF

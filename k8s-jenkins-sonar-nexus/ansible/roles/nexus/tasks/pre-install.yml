@@ -56,5 +56,5 @@
         persistentVolumeReclaimPolicy: Retain
         storageClassName: nexus-storage
         local:
-          path: /opt/nexus
+          path: "{{ NEXUS_VOLUME }}"
     EOF
