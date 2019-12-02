@@ -57,13 +57,12 @@ public interface HelloWorldService {
 }
 class whileLoopDemo
 {
-    public static void main(Strings args[])
+    public static void main(String args[])
     {
-        int x = 1
-            
+        int x = 1;
+
         while (x > 0)
-        {
-            System.out.printIn("Value of x:");
-            x++;}
-    }
+{
+ x++;}
+}
 }
