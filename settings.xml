@@ -1,17 +1,21 @@
 <settings>
-  <mirrors>
+    <mirrors>
     <mirror>
-      <id>group</id>
-      <name>Maven_group</name>
-      <url>http://nexus.nexus.svc.cluster.local/repository/Maven_group</url>
+      <!--This sends everything else to /public -->
+      <id>nexus</id>
       <mirrorOf>*</mirrorOf>
+      <url>http://nexus.nexus.svc.cluster.local/repository/Maven_group/</url>
     </mirror>
   </mirrors>
-  <servers>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>nexus</activeProfile>
+</activeProfiles>
+   <servers>
     <server>
-      <id>nexus-hosted</id>
+      <id>nexus</id>
       <username>admin</username>
       <password>admin</password>
     </server>
-   </servers> 
+  </servers>
 </settings>
