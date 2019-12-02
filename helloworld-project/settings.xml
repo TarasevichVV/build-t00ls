@@ -10,7 +10,7 @@
     <mirror>
       <id>central</id>
       <name>central</name>
-      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081:8081/repository/maven-jenkins-group/</url>
+      <url>http://nexus-service.nexus-ns.svc.cluster.local:8081/repository/maven-jenkins-group/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
