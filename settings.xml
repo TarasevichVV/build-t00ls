@@ -2,8 +2,8 @@
   <servers>
     <server>
       <id>nexus-hosted</id>
-      <username>jenkins</username>
-      <password>mias123</password>
+      <username>admin</username>
+      <password>admin</password>
     </server>
    </servers>
 
