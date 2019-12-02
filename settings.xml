@@ -3,14 +3,9 @@
     <server>
       <id>nexus-hosted</id>
       <username>jenkins</username>
-      <password>jenkins</password>
-    </server>
-    <server>
-      <id>nexus-releases</id>
-      <username>jenkins</username>
       <password>mias123</password>
     </server>
-  </servers>
+   </servers>
 
   <mirrors>
     <mirror>
