@@ -11,7 +11,7 @@
         <repositories>
           <repository>
             <id>maven-host</id>
-            <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/maven-host/</url>
+            <url>http://nexus-service.devops-tools.svc.cluster.local:8081/repository/proxy-repo/</url>
             <releases>
               <enabled>true</enabled>
             </releases>
