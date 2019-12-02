@@ -56,9 +56,6 @@ public class ClientTest {
 
     private HelloWorldService client;
 
-while(true){
-console.log("LOOP");
-}
     @BeforeClass
     public static void beforeClass() throws MalformedURLException {
         String deploymentUrl = System.getProperty(SERVER_URL_PROPERTY);
