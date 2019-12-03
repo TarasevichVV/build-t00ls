@@ -11,7 +11,7 @@
 <id>central</id>
 <name>central</name>
 <url>
-http://nexus-service.devops-tools.svc.cluster.local:8081/repository/topic7/
+http://nexus/repository/topic7/
 </url>
 <mirrorOf>*</mirrorOf>
 </mirror>
