@@ -26,9 +26,9 @@ spec:
           readinessProbe:
             httpGet:
              path: /helloworld-ws
-               port: 8080
-               initialDelaySeconds: 5
-               periodSeconds: 5
-               successThreshold: 1
+                 port: 8080
+                 initialDelaySeconds: 5
+                 periodSeconds: 5
+                 successThreshold: 1
       imagePullSecrets:
       - name: docker-secret 
