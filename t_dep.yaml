@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: tomcat
-          image: 192.168.56.100:32133/vtarasevich/tomcat
+          image: 192.168.56.100:32133/vtarasevich/tomcat:VERSION
           ports:
             - containerPort: 8080
       imagePullSecrets:
