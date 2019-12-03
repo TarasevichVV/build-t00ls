@@ -17,8 +17,8 @@
     path: "{{ NEXUS_FOLDER }}"
     state: directory
     mode: 0755
-    owner: vagrant
-    group: vagrant
+    owner: 200
+    group: 200
   become: yes
 
 - name: Copy '*.yml' files for deploying NEXUS
@@ -50,7 +50,7 @@
                 values:
                 - "{{ VOLUME_HOST }}"
         capacity:
-          storage: 4Gi
+          storage: 20Gi
         accessModes:
         - ReadWriteOnce
         persistentVolumeReclaimPolicy: Retain

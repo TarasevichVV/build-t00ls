@@ -1,6 +1,0 @@
-- name: Install Jenkins
-  hosts: master
-
-  roles:
-  - jenkins
-  - nginx
