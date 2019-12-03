@@ -87,10 +87,3 @@ public class HelloWorldServiceImpl implements HelloWorldService {
         return nameBuilder.toString();
     }
 }
-/*#############
-#simple add lines */
-public class WhileLoopDemo 
-{
-  int count = 1;
-  
-  }
