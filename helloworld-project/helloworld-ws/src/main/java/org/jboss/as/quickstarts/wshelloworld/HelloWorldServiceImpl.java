@@ -33,7 +33,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     @Override
     public String sayHello() {
         return "Hello World!";
-        while (true) { println "hello" }
+        while (true) { println "hello" };
     }
 
     @Override
