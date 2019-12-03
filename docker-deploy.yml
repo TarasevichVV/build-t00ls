@@ -3,6 +3,12 @@ kind: Deployment
 metadata:
   name: docker
 spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
   selector:
     matchLabels:
       app: docker
@@ -16,6 +22,13 @@ spec:
         image: sonar3:31111/helloworld-sivanov:rc
         ports:
         - containerPort: 8080
+	readinessProbe:
+          httpGet:
+             path: /
+             port: 8080
+             initialDelaySeconds: 5
+             periodSeconds: 5
+             successThreshold: 1
       imagePullSecrets:
       - name: docker-secret
 
