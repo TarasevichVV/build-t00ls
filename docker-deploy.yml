@@ -24,7 +24,7 @@ spec:
         - containerPort: 8080
         readinessProbe:
           httpGet:
-            path: /helloworld-ws
+            path: /
             port: 8080
           initialDelaySeconds: 24
           periodSeconds: 3
