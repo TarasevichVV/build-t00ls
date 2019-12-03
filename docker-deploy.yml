@@ -24,12 +24,12 @@ spec:
         - containerPort: 8080
         readinessProbe:
           httpGet:
-            path: /
+            path: /helloworld-ws
             port: 8080
-          initialDelaySeconds: 5
-          periodSeconds: 1
+          initialDelaySeconds: 24
+          periodSeconds: 3
           successThreshold: 1
-          timeoutSeconds: 3
+          timeoutSeconds: 5
       imagePullSecrets:
       - name: docker-secret
 
