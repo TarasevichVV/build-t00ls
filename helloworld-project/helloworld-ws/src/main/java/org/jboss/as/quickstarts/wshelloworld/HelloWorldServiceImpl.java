@@ -89,5 +89,8 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 }
 /*#############
 #simple add lines */
-eg=1
-
+public class WhileLoopDemo 
+{
+  int count = 1;
+  
+  }
