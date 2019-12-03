@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: docker
+  name: tomcat
 spec:
   replicas: 3
   strategy:
@@ -11,24 +11,24 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      app: docker
+      app: tomcat
   template:
     metadata:
       labels:
-        app: docker
+        app: tomcat
     spec:
       containers:
-      - name: docker
+      - name: tomcat
         image: sonar3:31111/helloworld-sivanov:rc
         ports:
         - containerPort: 8080
-	readinessProbe:
+        readinessProbe:
           httpGet:
-             path: /
-             port: 8080
-             initialDelaySeconds: 5
-             periodSeconds: 5
-             successThreshold: 1
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1
       imagePullSecrets:
       - name: docker-secret
 
