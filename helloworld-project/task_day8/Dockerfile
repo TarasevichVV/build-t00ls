@@ -1,4 +1,4 @@
-From alpine
+FROM alpine
 
 RUN apk update && apk add wget tar openjdk8 && \
  wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz && \
