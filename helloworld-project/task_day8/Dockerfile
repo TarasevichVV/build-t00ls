@@ -6,8 +6,7 @@ RUN apk update && apk add wget tar openjdk8 && \
  mkdir /opt/tomcat && \
  mv apache-tomcat*/* /opt/tomcat/
 
-CMD ["ls"]
-
+RUN ls -lha
 # COPY helloworld-project/helloworld-ws/target/helloworld-ws.war /opt/tomcat/webapps
 
 EXPOSE 8080
