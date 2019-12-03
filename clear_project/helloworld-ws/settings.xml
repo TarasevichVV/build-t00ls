@@ -1,0 +1,23 @@
+  <servers>
+    <server>
+      <id>nexus-hosted</id>
+      <username>jenkins</username>
+      <password>jenkins</password>
+    </server>
+    <server>
+      <id>nexus-releases</id>
+      <username>jenkins</username>
+      <password>mias123</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>group</id>
+      <name>Maven_group</name>
+      <url>http://nexus.nexus.svc.cluster.local/repository/Maven_group/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+</settings>
