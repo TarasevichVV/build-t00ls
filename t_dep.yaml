@@ -4,12 +4,12 @@ metadata:
   name: tomcat
   namespace: tomcat
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
-  type: RollingUpdate
-  rollingUpdate:
-    maxSurge: 1
-    maxUnavailable: 25%
+    type: RollingUpdate
+    rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 25%
   selector:
     matchLabels:
       app: tomcat
@@ -25,10 +25,10 @@ spec:
           - containerPort: 8080
           readinessProbe:
             httpGet:
-             path: /helloworld-ws
-                 port: 8080
-                 initialDelaySeconds: 5
-                 periodSeconds: 5
-                 successThreshold: 1
+              path: /helloworld-ws
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
       imagePullSecrets:
-      - name: docker-secret 
+      - name: docker-secret
