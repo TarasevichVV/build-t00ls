@@ -2,7 +2,7 @@
 
 ### Develop deployment for Nexus, persistent volume.
 You can find this files there:
-
+https://github.com/MNT-Lab/build-t00ls/tree/anikitsenka/helloworld-project/task_day7/deploy_files
 
 File setting.xml you can find here:
 https://github.com/MNT-Lab/build-t00ls/blob/anikitsenka/helloworld-project/settings.xml
