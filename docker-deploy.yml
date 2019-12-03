@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker
+  template:
+    metadata:
+      labels:
+        app: docker
+    spec:
+      containers:
+      - name: docker
+        image: 192.168.56.155:31111/ykachatkou/tomcat:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: docker-secret
+
+
