@@ -34,6 +34,10 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String sayHello() {
         return "Hello World!";
     }
+    @Override
+    public String sayHello() {
+        return "Hello World!";
+    }
 
     @Override
     public String sayHelloToName(final String name) {
