@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
+int j;
+while (true) {
+  j++;
+}
 void test(){
     while(true){
         System.out.println("test");
