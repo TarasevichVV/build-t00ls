@@ -20,7 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
-
+void test(){
+    while(true){
+        System.out.println("test");
+    }
+}
+test
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
