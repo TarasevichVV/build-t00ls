@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: docker
+  name: tomcat-docker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: docker
+      app: tomcat-docker
   template:
     metadata:
       labels:
-        app: docker
+        app: tomcat-docker
     spec:
       containers:
         - name: tomcat
@@ -25,4 +25,20 @@ spec:
             periodSeconds: 5
             successThreshold: 1
       imagePullSecrets:
-      - name: docker-secret
+      - name: regcred
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-docker-svc
+spec:
+  type: NodePort
+  ports:
+    - name: tomcat
+      port: 8080
+      nodePort: 30080
+      targetPort: 8080
+  selector:
+    app: tomcat-docker
