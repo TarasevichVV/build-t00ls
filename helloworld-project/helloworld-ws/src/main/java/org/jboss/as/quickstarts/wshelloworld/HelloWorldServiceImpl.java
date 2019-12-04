@@ -20,16 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebService;
-int j;
-while (true) {
-  j++;
-}
-void test(){
-    while(true){
-        System.out.println("test");
-    }
-}
-test
+
 /**
  * The implementation of the HelloWorld JAX-WS Web Service.
  *
@@ -38,10 +29,7 @@ test
 @WebService(serviceName = "HelloWorldService", portName = "HelloWorld", name = "HelloWorld", endpointInterface = "org.jboss.as.quickstarts.wshelloworld.HelloWorldService",
     targetNamespace = "http://www.jboss.org/eap/quickstarts/wshelloworld/HelloWorld")
 public class HelloWorldServiceImpl implements HelloWorldService {
-    
-    while(true){
-        System.out.println("test");
-}
+
     @Override
     public String sayHello() {
         return "Hello World!";

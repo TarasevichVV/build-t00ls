@@ -19,24 +19,7 @@ package org.jboss.as.quickstarts.wshelloworld;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-public class ExampleClass {
-    /**
-     * System.out.println utility method
-     *
-     * @param value : value to print
-     */
-    static void print(String value) {
-        System.out.println(value);
-    }
-    /**
-     * main method for this class
-     */
-    public static void main(String[] args) {
-        while(true){
-            print("printing...");
-        }
-    }
-}
+
 /**
  * A simple example of how to setup a JAX-WS Web Service. It can say hello to everyone or to someone in particular.
  *
