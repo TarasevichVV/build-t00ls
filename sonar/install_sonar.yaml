@@ -2,6 +2,11 @@
 kubectl create secret generic postgres-pwd --namespace=sonar --from-literal=password-post=123456
 kubectl create ns sonar
 
+mkdir -p /opt/sonar/logs
+mkdir -p /opt/sonar/data
+mkdir -p /opt/sonar/extensions
+mkdir -p /opt/sonar/conf
+chown -R 200:200 /opt/sonar
 
 cat <<EOF > install_sonar.yaml
 kind: PersistentVolume
@@ -120,6 +125,28 @@ spec:
               value: jdbc:postgresql://sonar-postgres:5432/sonar
           ports:
             - containerPort: 9000
+          volumeMounts:
+            - name: sonarvolume
+              mountPath: /opt/sonar/logs
+            - name: sonarvolume2
+              mountPath: /opt/sonar/data
+            - name: sonarvolume3
+              mountPath: /opt/sonar/extensions
+            - name: sonarvolume4
+              mountPath: /opt/sonar/conf
+      volumes:
+        - name: sonarvolume
+          hostPath:
+            path: /opt/sonar/logs
+        - name: sonarvolume2
+          hostPath:
+            path: /opt/sonar/data
+        - name: sonarvolume3
+          hostPath:
+            path: /opt/sonar/conf
+        - name: sonarvolume4
+          hostPath:
+            path: /opt/sonar/extensions
 ---
 apiVersion: v1
 kind: Service
