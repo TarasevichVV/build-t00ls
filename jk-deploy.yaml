@@ -10,13 +10,12 @@ spec:
     targetPort: 8080
   type: LoadBalancer
   selector:
-app: tomcat
+    app: tomcat
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tomcat
-
 spec:
   replicas: 2
   strategy:
