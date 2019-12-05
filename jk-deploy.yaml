@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: 192.168.56.240:32426/amiasnikovich:rc-28
+        image: 192.168.56.240:32426/amiasnikovich:rc-$VERSION
         ports:
         - containerPort: 8080
         readinessProbe:
