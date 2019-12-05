@@ -5,12 +5,14 @@ metadata:
   labels:
     app: tomcat
 spec:
+  selector:
+    app: tomcat
   ports:
   - port: 80
     targetPort: 8080
+    name: http
   type: LoadBalancer
-  selector:
-    app: tomcat
+
 
 apiVersion: apps/v1
 kind: Deployment
