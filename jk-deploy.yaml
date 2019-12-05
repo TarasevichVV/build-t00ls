@@ -46,4 +46,4 @@ spec:
           successThreshold: 1
           timeoutSeconds: 5
       imagePullSecrets:
-- name: docker-secret
+        - name: docker-secret
