@@ -28,6 +28,7 @@
     <packaging>war</packaging>
     <name>${qs.name.prefix} helloworld-ws</name>
     <description>This project demonstrates a Hello World JAX-WS web service</description>
+    
 
     <licenses>
         <license>
