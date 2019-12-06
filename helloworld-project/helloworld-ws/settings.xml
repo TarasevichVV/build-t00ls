@@ -19,26 +19,6 @@
     <activeProfile>nexus</activeProfile>
   </activeProfiles>
 
-  <profiles>
-    <profile>
-      <id>nexus</id>
-      <!--Override the repository (and pluginRepository) "central" from the Maven Super POM
-          to activate snapshots for both! -->
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>http://nexus-service.nexus-ns.svc.cluster.local/repository/maven-snapshots/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>true</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-
   <pluginGroups>
     <pluginGroup>org.sonatype.plugins</pluginGroup>
   </pluginGroups>
