@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <settings>
     <mirrors>
     <mirror> <!--Send all requests to the public group -->
@@ -15,11 +16,4 @@
       </server>
     </servers>
 
-  <activeProfiles>
-    <activeProfile>nexus</activeProfile>
-  </activeProfiles>
-
-  <pluginGroups>
-    <pluginGroup>org.sonatype.plugins</pluginGroup>
-  </pluginGroups>
 </settings>
