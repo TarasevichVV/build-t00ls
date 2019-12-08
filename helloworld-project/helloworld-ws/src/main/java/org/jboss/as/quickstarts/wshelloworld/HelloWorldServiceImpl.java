@@ -33,7 +33,6 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     @Override
     public String sayHello() {
         return "Hello World!";
-        while (true) { println "The most infinity loop" }
     }
 
     @Override
@@ -87,4 +86,5 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 
         return nameBuilder.toString();
     }
+
 }
