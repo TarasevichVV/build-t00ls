@@ -70,7 +70,7 @@ metadata:
   name: tomcat-ingress
   namespace: skudrenko
   annotations:
-    nginx.ingress.kubernetes.io/rewrites: serviceName=tomcat-service rewrite=/helloworld-ws/
+    nginx.org/rewrites: serviceName=tomcat-service rewrite=/helloworld-ws/
 spec:
   rules:
   - host: skudrenko-app.k8s.playpit.by
