@@ -68,7 +68,7 @@ metadata:
   name: tomcat-ingress
   namespace: vtarasevich
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/rewrites: tocmat-service rewrite=/helloworld-ws/
 spec:
   rules:
   - host: vtarasevich.k8s.playpit.by
