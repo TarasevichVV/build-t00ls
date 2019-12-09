@@ -55,21 +55,20 @@ metadata:
   labels:
     app: tomcat
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 32000
   selector:
     app: tomcat
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: tomcat-ingress
   namespace: vtarasevich
   annotations:
-    nginx.org/rewrites: serviceName=tocmat-service rewrite=/helloworld-ws/
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: vtarasevich.k8s.playpit.by
@@ -78,4 +77,4 @@ spec:
       - path: /
         backend:
           serviceName: tocmat-service
-          servicePort: 80
+          servicePort: 8080
