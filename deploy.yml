@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat
+  namespace: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+        - name: tomcat
+          image: 192.168.56.106:30082/ashkraba/tomcat:latest
+          ports:
+          - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /helloworld-ws
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            successThreshold: 1
+      imagePullSecrets:
+      - name: regcred
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat
+  namespace: jenkins
+  labels:
+    app: tomcat
+spec:
+  type: ClusterIP
+  ports:
+
+    - port: 80
+
+      targetPort: 8080
+  selector:
+    app: tomcat
